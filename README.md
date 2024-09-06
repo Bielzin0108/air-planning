@@ -64,7 +64,7 @@ Para configurar e explorar o projeto, siga os passos abaixo:
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
 ## 📬 Contato
-📧 [Seu Nome] - gabrielcavalcante0108@gmail.com
+📧 [Gabriel Cavalcante] - gabrielcavalcante0108@gmail.com
 
 🔗 https://github.com/Bielzin0108/ViaJava
 
