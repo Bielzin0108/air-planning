@@ -49,7 +49,7 @@ Para configurar e explorar o projeto, siga os passos abaixo:
    
 
 
-##🚦 Como Usar
+## 🚦 Como Usar
 - **Usuário**:
 
 **Cadastro/Login:** Use as páginas de login e cadastro para criar e acessar sua conta.
@@ -60,7 +60,7 @@ Para configurar e explorar o projeto, siga os passos abaixo:
 **Gerenciamento de Destinos:** Adicione e gerencie os destinos e pacotes disponíveis.
 **Gerenciamento de Reservas:** Verifique e gerencie as reservas feitas pelos usuários.
 
-##📜 Licença
+## 📜 Licença
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
 ## 📬 Contato
