@@ -65,8 +65,11 @@ Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para ma
 
 ## 📬 Contato
 📧 [Gabriel Cavalcante] - gabrielcavalcante0108@gmail.com
+
 📧 [Luiz Gustavo] - gustavo.nscto@gmail.com
+
 📧 [Lucas Loiola] - lucasletsuo@gmail.com
+
 📧 [Pedro Henrique Telo Zardetti] - pedrozardetti1@gmail.com
 
 
