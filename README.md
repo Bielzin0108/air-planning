@@ -9,19 +9,19 @@
 * Tela da Agenda
 
 # ViaJava ✈️
-##📜 Visão Geral
+## 📜 Visão Geral
 Bem-vindo ao repositório do ViaJava, um projeto de aplicação web desenvolvido para o terceiro semestre, focado em criar um sistema de reservas para viagens. O projeto é dividido em duas visões principais: a do usuário e a do administrador.
 
-###🧑‍💻 Visão do Usuário
+### 🧑‍💻 Visão do Usuário
 Cadastro e Login: Permite que os usuários criem uma conta e acessem o sistema.
 Pesquisa de Viagens: Facilita a busca por destinos, hotéis e pacotes de turismo.
 
-###🏢 Visão do Administrador
+### 🏢 Visão do Administrador
 Gerenciamento de Destinos: Adiciona e gerencia informações sobre destinos e pacotes.
 Gerenciamento de Reservas: Visualiza e gerencia as reservas feitas pelos usuários.
 
 
-##🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 JSP: Para a criação de páginas dinâmicas do lado do servidor.
 Servlets: Para a lógica de controle e processamento de requisições.
 Maven: Para gerenciamento de dependências e construção do projeto.
