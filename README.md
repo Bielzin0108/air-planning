@@ -1,4 +1,7 @@
-# ViaJava-
+# ViaJava ✈️
+## 📜 Visão Geral
+Bem-vindo ao repositório do ViaJava, um projeto de aplicação web desenvolvido para o terceiro semestre, focado em criar um sistema de reservas para viagens. O projeto é dividido em duas visões principais: a do usuário e a do administrador.
+
 # FUNCIONALIDADES:
 
 * Tela de Login
@@ -7,10 +10,6 @@
 * Tela de Pesquisa de destinos disponíveis
 * Tela Direcionamento para o site de reserva
 * Tela da Agenda
-
-# ViaJava ✈️
-## 📜 Visão Geral
-Bem-vindo ao repositório do ViaJava, um projeto de aplicação web desenvolvido para o terceiro semestre, focado em criar um sistema de reservas para viagens. O projeto é dividido em duas visões principais: a do usuário e a do administrador.
 
 ### 🧑‍💻 Visão do Usuário
 Cadastro e Login: Permite que os usuários criem uma conta e acessem o sistema.
