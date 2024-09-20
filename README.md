@@ -4,20 +4,18 @@ Bem-vindo ao repositório do ViaJava, um projeto de aplicação web desenvolvido
 
 # FUNCIONALIDADES:
 
-* Tela de Login
-* Tela de Cadastro
-* Tela de Edição de Cadastro
-* Tela de Pesquisa de destinos disponíveis
-* Tela Direcionamento para o site de reserva
-* Tela da Agenda
-
+* Cadastro de Usuário
+* Login de User
+* Cadastro de voos (pelo admin) 
+* Busca por filtro dos voos reserva de voo 
+* CRUD de user (Criar, Atualizar e Deletar)
+  
 ### 🧑‍💻 Visão do Usuário
 Cadastro e Login: Permite que os usuários criem uma conta e acessem o sistema.
 Pesquisa de Viagens: Facilita a busca por destinos, hotéis e pacotes de turismo.
 
 ### 🏢 Visão do Administrador
-Gerenciamento de Destinos: Adiciona e gerencia informações sobre destinos e pacotes.
-Gerenciamento de Reservas: Visualiza e gerencia as reservas feitas pelos usuários.
+Gerenciamento de Destinos: Adiciona e gerencia informações sobre destinos, voos e pacotes.
 
 
 ## 🛠️ Tecnologias Utilizadas
