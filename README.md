@@ -29,12 +29,12 @@ HTML: Para estruturação das páginas web.
 Para configurar e explorar o projeto, siga os passos abaixo:
 1. Clone o repositório:
     ```bash
-    git clone https://github.com/Bielzin0108/ViaJava.git
+    git clone https://github.com/Bielzin0108/AirPlanning.git
     ```
 
 2. Navegue até o diretório do projeto:
     ```bash
-    cd ViaJava
+    cd AirPlanning
     ```
 
 3. Compile e execute o projeto com Maven
