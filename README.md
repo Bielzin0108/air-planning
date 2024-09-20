@@ -1,6 +1,6 @@
-# ViaJava ✈️
+# AirPlanning ✈️
 ## 📜 Visão Geral
-Bem-vindo ao repositório do ViaJava, um projeto de aplicação web desenvolvido para o terceiro semestre, focado em criar um sistema de reservas para viagens. O projeto é dividido em duas visões principais: a do usuário e a do administrador.
+Bem-vindo ao repositório do AirPlanning, um projeto de aplicação web desenvolvido para o terceiro semestre, focado em criar um sistema de reservas para viagens. O projeto é dividido em duas visões principais: a do usuário e a do administrador.
 
 # FUNCIONALIDADES:
 
