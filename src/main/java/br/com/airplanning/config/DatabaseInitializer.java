@@ -1,4 +1,4 @@
-package br.com.hamburgueria.config;
+package br.com.airplanning.config;
 
 import br.com.airplanning.config.ConnectionPoolConfig;
 
