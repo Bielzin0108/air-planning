@@ -7,6 +7,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class FlightRepository {
@@ -42,7 +44,7 @@ public class FlightRepository {
             Connection con = ConnectionPoolConfig.getConnection();
             PreparedStatement preparedStatement = con.prepareStatement(SQL);
             preparedStatement.setString(1, String.valueOf(flightId));
-            ResultSet rs = preparedStatement.getResultSet();
+            ResultSet rs = preparedStatement.executeQuery();
 
             if (rs.next()) {
                 String flightNumber = rs.getString("FLIGHT_NUMBER");
@@ -61,6 +63,38 @@ public class FlightRepository {
         }
 
         return flight;
+    }
+
+    public List<Flight> getAllFlights() {
+        String SQL = "SELECT * FROM FLIGHT";
+        List<Flight> flights = new ArrayList<>();
+
+        try {
+            Connection con = ConnectionPoolConfig.getConnection();
+            PreparedStatement preparedStatement = con.prepareStatement(SQL);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            while (rs.next()) {
+                String flightNumber = rs.getString("FLIGHT_NUMBER");
+                Timestamp departureDateTime = rs.getTimestamp("DEPARTURE_DATE_TIME");
+                Timestamp arrivalDateTime = rs.getTimestamp("ARRIVAL_DATE_TIME");
+                String origin = rs.getString("ORIGIN");
+                double price = rs.getDouble("PRICE");
+                UUID id = rs.getObject("ID", UUID.class);
+                UUID destinationId = rs.getObject("DESTINATION_ID", UUID.class);
+
+                Flight flight = new Flight(id, flightNumber, departureDateTime.toLocalDateTime(), arrivalDateTime.toLocalDateTime(), origin, price, destinationId);
+                flights.add(flight);
+            }
+
+            con.close();
+
+        } catch (Exception e) {
+            System.out.println("Não foi possível listar os voos! " + e.getMessage());
+            e.printStackTrace();
+        }
+
+        return flights;
     }
 
 }
