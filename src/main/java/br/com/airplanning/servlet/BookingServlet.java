@@ -1,2 +1,4 @@
-package br.com.airplanning.servlet;public class BookingServlet {
+package br.com.airplanning.servlet;
+
+public class BookingServlet {
 }
