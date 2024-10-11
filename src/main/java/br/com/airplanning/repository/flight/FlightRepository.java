@@ -97,4 +97,29 @@ public class FlightRepository {
         return flights;
     }
 
+    public boolean deleteFlight(UUID flightId) {
+        String SQL = "DELETE FROM FLIGHT WHERE ID = ?";
+        boolean isDeleted = false;
+
+        try {
+            Connection con = ConnectionPoolConfig.getConnection();
+            PreparedStatement preparedStatement = con.prepareStatement(SQL);
+            preparedStatement.setObject(1, flightId);
+            int rowsAffected = preparedStatement.executeUpdate();
+
+            if (rowsAffected > 0) {
+                isDeleted = true;
+            }
+
+            con.close();
+
+
+        } catch (Exception e) {
+            System.out.println("Não foi possível remover o voo! " + e.getMessage());
+            e.printStackTrace();
+        }
+        return isDeleted;
+    }
+
+
 }
