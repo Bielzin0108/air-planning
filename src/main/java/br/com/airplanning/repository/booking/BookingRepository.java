@@ -1,2 +1,4 @@
-package br.com.airplanning.repository.booking;public class BookingRepository {
+package br.com.airplanning.repository.booking;
+
+public class BookingRepository {
 }

@@ -51,7 +51,7 @@ public class CustomerRepository {
                 String password = rs.getString("PASSWORD");
                 String document = rs.getString("DOCUMENT");
                 TypeCustomer type = TypeCustomer.valueOf(rs.getString("TYPE"));
-                UUID id = UUID.fromString(rs.getObject("ID").toString());
+                UUID id = rs.getObject("ID", UUID.class);
                 customer = new Customer(id, name, phone, email, password, document, type);
             }
 
