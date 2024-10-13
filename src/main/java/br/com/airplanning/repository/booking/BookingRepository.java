@@ -2,10 +2,10 @@ package br.com.airplanning.repository.booking;
 
 import br.com.airplanning.config.ConnectionPoolConfig;
 import br.com.airplanning.model.Booking;
+import br.com.airplanning.repository.customer.dto.BookingDTO;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.Timestamp;
+import java.sql.*;
+import java.util.UUID;
 
 public class BookingRepository {
 
@@ -28,7 +28,51 @@ public class BookingRepository {
             throw new RuntimeException(e);
         }
     }
-    public void get() {
+
+    public BookingDTO get(UUID bookingId) throws SQLException {
+        String SQL = "SELECT BOOKING.RESERVATION_DATE AS DATA_RESERVA, " +
+                "FLIGHT.FLIGHT_NUMBER AS NUMERO_VOO, " +
+                "FLIGHT.DEPARTURE_DATE_TIME AS HORA_SAIDA, " +
+                "FLIGHT.ARRIVAL_DATE_TIME AS HORA_CHEGADA, " +
+                "FLIGHT.ORIGIN AS ORIGEM, " +
+                "FLIGHT.PRICE AS PRECO, " +
+                "DESTINATION.COUNTRY AS PAIS, " +
+                "DESTINATION.CITY AS CIDADE, " +
+                "SEATS.SEAT_NUMBER AS NUMERO_ASSENTO, " +
+                "SEATS.AVAILABLE AS DISPONIVEL " +
+                "FROM BOOKING " +
+                "JOIN FLIGHT ON BOOKING.FLIGHT_ID = FLIGHT.ID " +
+                "JOIN DESTINATION ON DESTINATION.ID = FLIGHT.DESTINATION_ID " +
+                "JOIN SEATS ON BOOKING.SEAT_ID = SEATS.ID " +
+                "WHERE BOOKING.ID = ?";
+
+        BookingDTO booking = null;
+
+        try {
+            Connection connection = ConnectionPoolConfig.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setObject(1, bookingId);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            if (rs.next()) {
+                booking = new BookingDTO(
+                        rs.getTimestamp("DATA_RESERVA").toLocalDateTime(),
+                        rs.getString("NUMERO_VOO"),
+                        rs.getTimestamp("HORA_SAIDA").toLocalDateTime(),
+                        rs.getTimestamp("HORA_CHEGADA").toLocalDateTime(),
+                        rs.getString("ORIGEM"),
+                        rs.getDouble("PRECO"),
+                        rs.getString("PAIS"),
+                        rs.getString("CIDADE"),
+                        rs.getInt("NUMERO_ASSENTO"),
+                        rs.getBoolean("DISPONIVEL")
+                );
+            }
+            connection.close();
+            return booking;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         // SELECT BOOKING.RESERVATION_DATE AS DATA_RESERVA,
         //FLIGHT.FLIGHT_NUMBER AS NUMERO_VOO,
         //FLIGHT.DEPARTURE_DATE_TIME AS HORA_SAIDA,
