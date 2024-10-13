@@ -12,7 +12,6 @@ public class Criptografia {
             MessageDigest md = MessageDigest.getInstance("MD5");
             md.update(senha.getBytes());
             byte[] digest = md.digest();
-            String resultado = new String(Hex.encodeHex(digest));
-            return resultado;
+            return new String(Hex.encodeHex(digest));
         }
 }
