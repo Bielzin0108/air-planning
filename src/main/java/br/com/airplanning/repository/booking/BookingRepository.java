@@ -18,7 +18,7 @@ public class BookingRepository {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
             preparedStatement.setObject(1, booking.getId());
             preparedStatement.setTimestamp(2, Timestamp.valueOf(booking.getReservationDate()));
-            preparedStatement.setObject(3, booking.getUserId());
+            preparedStatement.setObject(3, booking.getCustomerId());
             preparedStatement.setObject(4, booking.getFlightId());
             preparedStatement.setObject(5, booking.getSeatId());
             int rowsAffected = preparedStatement.executeUpdate();
@@ -88,6 +88,54 @@ public class BookingRepository {
         //JOIN DESTINATION ON DESTINATION.ID = FLIGHT.DESTINATION_ID
         //JOIN SEATS ON BOOKING.SEAT_ID = SEATS.ID
         //WHERE BOOKING.ID = '4d2a7913-632f-4986-ab0c-f6e390e2ce3c'
+    }
+
+    public boolean delete(UUID bookingId) {
+        String SQL = "SELECT * FROM BOOKING WHERE ID = ?";
+
+        Booking booking = null;
+
+        Connection connection = null;
+
+        try {
+            connection = ConnectionPoolConfig.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setObject(1, bookingId);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            if (rs.next()) {
+                booking = new Booking(rs.getObject("id", UUID.class), rs.getTimestamp("RESERVATION_DATE").toLocalDateTime(), rs.getObject("CUSTOMER_ID", UUID.class), rs.getObject("FLIGHT_ID", UUID.class), rs.getObject("SEAT_ID", UUID.class));
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+        if (booking == null) {
+            return false;
+        }
+
+        SQL = "DELETE FROM BOOKING WHERE ID = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setObject(1, bookingId);
+            preparedStatement.executeUpdate();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+        SQL = "UPDATE SEATS SET AVAILABLE = 'FALSE' WHERE ID = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setObject(1, booking.getSeatId());
+            int rowsAffected = preparedStatement.executeUpdate();
+
+            return rowsAffected > 0;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
 }
