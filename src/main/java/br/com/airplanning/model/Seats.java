@@ -1,7 +1,5 @@
 package br.com.airplanning.model;
-
 import java.util.UUID;
-
 public class Seats {
     private UUID id;
     private int seatNumber;
