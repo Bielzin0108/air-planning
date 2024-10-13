@@ -1,16 +1,17 @@
 package br.com.airplanning.model;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class Booking {
     private UUID id;
-    private LocalDate reservationDate;
+    private LocalDateTime reservationDate;
     private UUID userId;
     private UUID flightId;
     private UUID seatId;
 
-    public Booking(UUID id, LocalDate reservationDate, UUID userId, UUID flightId, UUID seatId) {
+    public Booking(UUID id, LocalDateTime reservationDate, UUID userId, UUID flightId, UUID seatId) {
         this.id = id;
         this.reservationDate = reservationDate;
         this.userId = userId;
@@ -26,11 +27,11 @@ public class Booking {
         this.id = id;
     }
 
-    public LocalDate getReservationDate() {
+    public LocalDateTime getReservationDate() {
         return reservationDate;
     }
 
-    public void setReservationDate(LocalDate reservationDate) {
+    public void setReservationDate(LocalDateTime reservationDate) {
         this.reservationDate = reservationDate;
     }
 

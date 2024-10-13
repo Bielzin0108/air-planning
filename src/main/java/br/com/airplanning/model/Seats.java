@@ -4,12 +4,18 @@ import java.util.UUID;
 
 public class Seats {
     private UUID id;
-    private String seatNumber;
+    private int seatNumber;
     private boolean available;
     private UUID flightId;
 
-    public Seats(UUID id, String seatNumber, boolean available, UUID flightId) {
+    public Seats(UUID id, int seatNumber, boolean available, UUID flightId) {
         this.id = id;
+        this.seatNumber = seatNumber;
+        this.available = available;
+        this.flightId = flightId;
+    }
+
+    public Seats(int seatNumber, boolean available, UUID flightId) {
         this.seatNumber = seatNumber;
         this.available = available;
         this.flightId = flightId;
@@ -23,11 +29,11 @@ public class Seats {
         this.id = id;
     }
 
-    public String getSeatNumber() {
+    public int getSeatNumber() {
         return seatNumber;
     }
 
-    public void setSeatNumber(String seatNumber) {
+    public void setSeatNumber(int seatNumber) {
         this.seatNumber = seatNumber;
     }
 
