@@ -2,6 +2,7 @@ package br.com.airplanning.repository.flight;
 
 import br.com.airplanning.config.ConnectionPoolConfig;
 import br.com.airplanning.model.Flight;
+import br.com.airplanning.model.Seats;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,17 +15,19 @@ import java.util.UUID;
 public class FlightRepository {
 
     public void createFlight(Flight flight) {
-        String SQL = "INSERT INTO FLIGHT (FLIGHT_NUMBER, DEPARTURE_DATE_TIME, ARRIVAL_DATE_TIME, ORIGIN, PRICE, DESTINATION_ID) VALUES (?, ?, ?, ?, ?, ?)";
+        String SQL = "INSERT INTO FLIGHT (ID, FLIGHT_NUMBER, DEPARTURE_DATE_TIME, ARRIVAL_DATE_TIME, ORIGIN, PRICE, DESTINATION_ID) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
+        UUID id = UUID.randomUUID();
         try {
             Connection con = ConnectionPoolConfig.getConnection();
             PreparedStatement preparedStatement = con.prepareStatement(SQL);
-            preparedStatement.setString(1, flight.getFlightNumber());
-            preparedStatement.setTimestamp(2, Timestamp.valueOf(flight.getDepartureDateTime()));
-            preparedStatement.setTimestamp(3, Timestamp.valueOf(flight.getArrivalDateTime()));
-            preparedStatement.setString(4, flight.getOrigin());
-            preparedStatement.setDouble(5, flight.getPrice());
-            preparedStatement.setString(6, String.valueOf(flight.getDestinationId()));
+            preparedStatement.setString(1, id.toString());
+            preparedStatement.setString(2, flight.getFlightNumber());
+            preparedStatement.setTimestamp(3, Timestamp.valueOf(flight.getDepartureDateTime()));
+            preparedStatement.setTimestamp(4, Timestamp.valueOf(flight.getArrivalDateTime()));
+            preparedStatement.setString(5, flight.getOrigin());
+            preparedStatement.setDouble(6, flight.getPrice());
+            preparedStatement.setString(7, String.valueOf(flight.getDestinationId()));
             preparedStatement.execute();
 
 
@@ -34,6 +37,8 @@ public class FlightRepository {
             e.printStackTrace();
 
         }
+
+        createSeatsToFlight(id);
     }
 
     public Flight getFlightById(UUID flightId) {
@@ -57,12 +62,11 @@ public class FlightRepository {
 
                 flight = new Flight(id, flightNumber, departureDateTime.toLocalDateTime(), arrivalDateTime.toLocalDateTime(), origin, price, destinationId);
             }
+            return flight;
         } catch (Exception e) {
             System.out.println("A criação do voo não deu certo: " + e.getMessage());
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
-
-        return flight;
     }
 
     public List<Flight> getAllFlights() {
@@ -88,7 +92,6 @@ public class FlightRepository {
             }
 
             con.close();
-
         } catch (Exception e) {
             System.out.println("Não foi possível listar os voos! " + e.getMessage());
             e.printStackTrace();
@@ -121,5 +124,37 @@ public class FlightRepository {
         return isDeleted;
     }
 
+
+    private void createSeatsToFlight(UUID flightId) {
+        String SQL = "INSERT INTO SEATS (SEAT_NUMBER, AVAILABLE, FLIGHT_ID) VALUES (?, ?, ?)";
+        List<Seats> seats = loadSeatsToFlight(flightId);
+
+        try {
+            Connection connection = ConnectionPoolConfig.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            for (Seats seat : seats) {
+                preparedStatement.setInt(1, seat.getSeatNumber());
+                preparedStatement.setBoolean(2, seat.isAvailable());
+                preparedStatement.setObject(3, seat.getFlightId());
+                preparedStatement.addBatch();
+            }
+
+            preparedStatement.executeBatch();
+            connection.close();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private List<Seats> loadSeatsToFlight(UUID flightId) {
+        List<Seats> seatsList = new ArrayList<>();
+
+        for (int i = 1; i <= 30; i++) {
+            seatsList.add(new Seats(i, true, flightId));
+        }
+
+        return seatsList;
+    }
 
 }
