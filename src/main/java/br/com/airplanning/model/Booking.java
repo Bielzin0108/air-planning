@@ -7,14 +7,14 @@ import java.util.UUID;
 public class Booking {
     private UUID id;
     private LocalDateTime reservationDate;
-    private UUID userId;
+    private UUID customerId;
     private UUID flightId;
     private UUID seatId;
 
-    public Booking(UUID id, LocalDateTime reservationDate, UUID userId, UUID flightId, UUID seatId) {
+    public Booking(UUID id, LocalDateTime reservationDate, UUID customerId, UUID flightId, UUID seatId) {
         this.id = id;
         this.reservationDate = reservationDate;
-        this.userId = userId;
+        this.customerId = customerId;
         this.flightId = flightId;
         this.seatId = seatId;
     }
@@ -35,12 +35,12 @@ public class Booking {
         this.reservationDate = reservationDate;
     }
 
-    public UUID getUserId() {
-        return userId;
+    public UUID getCustomerId() {
+        return customerId;
     }
 
-    public void setUserId(UUID userId) {
-        this.userId = userId;
+    public void setCustomerId(UUID customerId) {
+        this.customerId = customerId;
     }
 
     public UUID getFlightId() {
