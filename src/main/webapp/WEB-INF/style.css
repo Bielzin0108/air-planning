@@ -44,3 +44,44 @@ header {
 .nav-links i {
     color: white;
 }
+
+footer {
+    background-color: #4A5DF2;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-menu {
+    margin-bottom: 10px;
+}
+
+.footer-menu ul {
+    list-style: none;
+}
+
+.footer-menu ul li {
+    margin: 10px 0;
+}
+
+.footer-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.footer-menu ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: center; 
+    align-items: center;              
+    text-align: center;      
+    font-size: 12px;
+    max-width: 800px;
+    margin: 0 auto;
+}
