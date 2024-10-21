@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #4A5DF2;
+    padding: 25px 50px;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.admin-info {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    color: white;
+}
+
+.admin-info i {
+    margin-right: 5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.nav-links i {
+    color: white;
+}
