@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ 
+ body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+ .container {
+    display: flex;
+    width: 100%;
+    height: 100vh; 
+    background-color: white;
+ }
+ 
+ .left-side {
+    width: 50%;
+    background-color: #5157FF;
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%); /* Forma diagonal */
+ }
+ 
+ .left-side h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+ }
+ 
+ .left-side p {
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 300px; 
+    text-align: left; 
+ }
+ 
+ 
+ .right-side {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+ .signup-box {
+    width: 100%;
+    max-width: 350px;
+ }
+ 
+ h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+ }
+ 
+ .input-group {
+    margin-bottom: 20px;
+    position: relative;
+ }
+ 
+ .input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+ }
+ 
+ .input-group input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    border-radius: 0;
+ }
+ 
+ input::placeholder {
+    font-weight: bold;
+    color: black;
+ }
+ .input-group input:focus {
+    border-bottom: 3px solid black;
+ }
+ 
+ .input-group i {
+    position: absolute;
+    right: 10px;
+    top: 35px;
+    font-size: 18px;
+    color: #888;
+ }
+ 
+ button {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #5157FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+ }
+ 
+ button:hover {
+    background-color: #3B41D6;
+ }
+ 
+ p {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    text-align: left;
+ }
+ 
+ p a {
+    color: #5157FF;
+    text-decoration: none;
+ }
+ 
+ p a:hover {
+    text-decoration: underline;
+ }
+ 
