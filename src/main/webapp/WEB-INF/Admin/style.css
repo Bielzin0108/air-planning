@@ -1,3 +1,11 @@
+@font-face {
+    font-family: Quicksand-Bold;
+    src: url(../fonts/Quicksand-Bold.ttf);
+  }
+  @font-face {
+    font-family: Quicksand-Regular;
+    src: url(../fonts/Quicksand-Regular.ttf);
+  }
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +22,7 @@ header {
 }
 
 .container {
+    flex: 1;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -56,6 +65,7 @@ footer {
 
 .footer-menu {
     margin-bottom: 10px;
+    padding-left: 35px;
 }
 
 .footer-menu ul {
@@ -85,3 +95,39 @@ footer {
     max-width: 800px;
     margin: 0 auto;
 }
+.buttons {
+    display: block;
+    gap: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.buttons button {
+    display: block;
+    margin-bottom: 30px; 
+    padding: 15px 30px; 
+    font-size: 18px;
+    width: 17%;
+    border-radius: 10px;
+    color: black;
+    border-color: white;
+    background-color: white;
+    font-family: Quicksand-Bold;
+}
+
+.buttons button:hover {
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+.buttons button:active {
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+
