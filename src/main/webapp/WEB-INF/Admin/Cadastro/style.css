@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+header {
+    background-color: #4a57eb;
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+main {
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: black;
+}
+
+.flight-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+label {
+    flex: 1;
+    font-size: 18px;
+    color: black;
+}
+
+input {
+    flex: 2;
+
+    margin: 10;
+    width: thin;
+    border: none;
+    background-color: black;
+    border-radius: 20;
+    text-align: left;
+    
+}
+
+.icon {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: blue;
+}
+
+footer {
+    background-color: #4a57eb;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer p {
+    font-size: 12px;
+    margin-top: 10px;
+}
