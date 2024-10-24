@@ -107,6 +107,7 @@ main {
     margin-right: 0;
 }
 
+
 button[type="submit"] {
     width: 90px;
     padding: 15px;
@@ -135,4 +136,21 @@ button[type="submit"]:hover {
 .icon-plane {
     margin-right: 10px;
     font-size: 16px;
+}
+.input-group.dates {
+    display: flex;
+    justify-content: space-between; 
+    gap: 10px; 
+}
+
+.input-group.dates input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1; 
+}
+
+.input-group.dates input:first-child {
+    margin-right: 10px; 
 }
