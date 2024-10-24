@@ -37,14 +37,12 @@ main {
 }
 
 h1 {
-    text-align: center;
     margin-bottom: 40px;
     color: black;
 }
 
 .flight-form {
     max-width: 800px;
-    margin: 0 auto;
 }
 
 .form-group {
@@ -52,6 +50,8 @@ h1 {
     align-items: center;
     margin-bottom: 20px;
     padding: 5px;
+    justify-content: space-between;
+    position: relative;
 }
 
 label {
@@ -63,11 +63,10 @@ label {
 input {
     flex: 2;
 
-    margin: 10;
+    
     width: thin;
-    border: none;
-    background-color: black;
-    border-radius: 20;
+   
+    
     text-align: left;
     
 }
@@ -78,6 +77,9 @@ input {
     color: black;
     text-decoration: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
 }
 
 .icon:hover {
@@ -108,4 +110,15 @@ footer a {
 footer p {
     font-size: 12px;
     margin-top: 10px;
+}
+
+.separator{
+    border-top: 2px solid #0c0b0b;
+    margin: 5px 0;
+    width: 50%;
+}
+.icones-plus{
+    display: flex;
+    justify-content: flex-end; /* Alinha ícones à direita */
+    align-items: center; /* Alinha verticalmente */
 }
