@@ -18,7 +18,7 @@ public class CreateUserServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("cadastro.jsp").forward(req, resp);
+        req.getRequestDispatcher("gerenciar-voos.jsp").forward(req, resp);
     }
 
     @Override
@@ -51,13 +51,13 @@ public class CreateUserServlet extends HttpServlet {
 
             } catch (Exception e) {
                 req.setAttribute("fail", "Não foi possível realizar o cadastro!");
-                req.getRequestDispatcher("cadastro.jsp").forward(req, resp);
+                req.getRequestDispatcher("gerenciar-voos.jsp").forward(req, resp);
                 return;
             }
 
         }
         req.setAttribute("failpassword", "As senhas não são iguais!");
-        req.getRequestDispatcher("cadastro.jsp").forward(req, resp);
+        req.getRequestDispatcher("gerenciar-voos.jsp").forward(req, resp);
     }
 
 
