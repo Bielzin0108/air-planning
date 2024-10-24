@@ -19,7 +19,7 @@
     </header>
 <div>
     <div class="buttons">
-        <button>Cadastrar Voo</button>
+        <button><a href="../Admin/Cadastro/index.html">Cadastrar Voo</a></button>
         <button>Editar Voo</button>
     </div>
 </div>
