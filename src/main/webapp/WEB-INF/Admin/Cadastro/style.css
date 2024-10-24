@@ -88,7 +88,7 @@ input {
 }
 .icones-plus {
     display: flex;
-    justify-content: flex-end;
+    margin-left: 350px;
     align-items: center;
 }
 footer {
