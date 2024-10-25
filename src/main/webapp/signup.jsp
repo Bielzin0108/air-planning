@@ -4,7 +4,7 @@
     <%@ page contentType="text/html; charset=UTF-8" %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="css/sign-up.css">
+    <link rel="stylesheet" href="css/signup.css">
 </head>
 <body>
     <div class="container">
@@ -38,7 +38,7 @@
                     </div>
                     </div>
                     <button type="submit">Sign up</button>
-                    <p>Já possui uma conta? <a href="#">Login</a></p>
+                    <p>Já possui uma conta? <a href="/login">Login</a></p>
                 </form>
             </div>
         </div>
