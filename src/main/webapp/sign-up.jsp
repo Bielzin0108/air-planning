@@ -17,17 +17,25 @@
             <div class="signup-box">
                 <h2>Sign Up</h2>
                 <form action="#" method="post">
+                    <div class="signup-container">
                     <div class="input-group">
+                        <div class="input-container">
                         <input type="text" id="nome" placeholder="Nome">
-                        <i class="icon-user"></i>
+                        <img class="icon" src="img/user.png" alt="Icone de user">
+                        </div>
                     </div>
                     <div class="input-group">
+                        <div class="input-container">
                         <input type="email" id="email" placeholder="E-mail">
-                        <i class="icon-email"></i>
+                        <img class="icon" src="img/mail.png" alt="Icone de email">
+                        </div>
                     </div>
                     <div class="input-group">
+                        <div class="input-container">
                         <input type="password" id="senha" placeholder="Senha">
-                        <i class="icon-lock"></i>
+                        <img class="icon" src="img/lock.png" alt="Icone de lock">
+                        </div>
+                    </div>
                     </div>
                     <button type="submit">Sign up</button>
                     <p>Já possui uma conta? <a href="#">Login</a></p>

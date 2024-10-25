@@ -1,3 +1,17 @@
+@font-face {
+    font-family: Quicksand-Bold;
+    src: url(/fonts/Quicksand-Bold.ttf);
+}
+@font-face {
+    font-family: Quicksand-Regular;
+    src: url(/fonts/Quicksand-Regular.ttf);
+}
+
+@font-face {
+    font-family: Quicksand-Semibold;
+    src: url(/fonts/Quicksand-SemiBold.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +19,6 @@
  }
  
  body {
-    font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
     height: 100vh;
     display: flex;
@@ -36,6 +49,7 @@
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
+     font-family: Quicksand-Bold;
  }
  
  .left-side p {
@@ -56,19 +70,25 @@
  
  .signup-box {
     width: 100%;
-    max-width: 350px;
+    max-width: 400px;
  }
  
  h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
+    margin-bottom: 64px;
+    font-size: 44px;
     font-weight: bold;
     text-align: center;
+     font-family: Quicksand-Bold;
  }
- 
+
+ .signup-container {
+     display: flex;
+     flex-direction: column;
+     gap: 28px;
+ }
+
  .input-group {
     margin-bottom: 20px;
-    position: relative;
  }
  
  .input-group label {
@@ -80,31 +100,34 @@
  .input-group input {
     width: 100%;
     padding: 10px 0;
-    font-size: 16px;
+    font-size: 12px;
     border: none;
-    border-bottom: 2px solid black;
     outline: none;
-    border-radius: 0;
+     font-family: Quicksand-Semibold;
  }
+
+ .input-group .icon {
+     width: 16px;
+     height: 16px;
+ }
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
  
  input::placeholder {
-    font-weight: bold;
     color: black;
  }
- .input-group input:focus {
-    border-bottom: 3px solid black;
- }
- 
- .input-group i {
-    position: absolute;
-    right: 10px;
-    top: 35px;
-    font-size: 18px;
-    color: #888;
- }
+
  
  button {
     width: 100%;
+     margin-top: 24px;
     padding: 15px;
     font-size: 16px;
     background-color: #5157FF;
@@ -119,15 +142,17 @@
  }
  
  p {
-    margin-top: 20px;
+    margin-top: 32px;
     font-size: 14px;
     text-align: center;
     text-align: left;
+     font-family: Quicksand-Regular;
  }
  
  p a {
     color: #5157FF;
     text-decoration: none;
+     font-family: Quicksand-Bold;
  }
  
  p a:hover {

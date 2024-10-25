@@ -71,6 +71,10 @@
      outline: none;
  }
 
+input::placeholder {
+    color: black;
+}
+
 
 .input-container #nome {
     border: none;
