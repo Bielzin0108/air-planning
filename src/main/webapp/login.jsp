@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <button type="submit">Login</button>
-                <p>Não possui uma conta? <a href="../SignUp/index.html">Cadastre-se</a></p>
+                <p>Não possui uma conta? <a href="/sign-up.jsp">Cadastre-se</a></p>
             </form>
         </div>
     </div>
