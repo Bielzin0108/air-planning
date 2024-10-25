@@ -1,11 +1,11 @@
-@font-face {
-  font-family: Quicksand-Bold;
-  src: url(../WEB-INF/fonts/Quicksand-Bold.ttf);
-}
-@font-face {
-  font-family: Quicksand-Regular;
-  src: url(../WEB-INF/fonts/Quicksand-Regular.ttf);
-}
+  @font-face {
+    font-family: Quicksand-Bold;
+    src: url(/fonts/Quicksand-Bold.ttf);
+  }
+  @font-face {
+    font-family: Quicksand-Regular;
+    src: url(/fonts/Quicksand-Regular.ttf);
+  }
 
 * {
   margin: 0;

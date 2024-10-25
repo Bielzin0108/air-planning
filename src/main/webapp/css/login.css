@@ -1,3 +1,19 @@
+@font-face {
+    font-family: Quicksand-Bold;
+    src: url(/fonts/Quicksand-Bold.ttf);
+}
+@font-face {
+    font-family: Quicksand-Regular;
+    src: url(/fonts/Quicksand-Regular.ttf);
+}
+
+@font-face {
+    font-family: Quicksand-Semibold;
+    src: url(/fonts/Quicksand-SemiBold.ttf);
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +21,7 @@
  }
  
  body {
-    font-family: 'Arial', sans-serif;
-    background-image: url(../Login/img/tela\ login.png);
+    background-image: url(/img/login.png);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -24,25 +39,48 @@
  }
  
  .login-box {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #FCFAFF;
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 450px;
-    height: auto;
     text-align: center;
  }
  
  h2 {
+     font-family: 'Quicksand-Bold';
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: bold;
  }
  
  .input-group {
-    margin-bottom: 20px;
-    position: relative;
+     display: flex;
+     flex-direction: column;
+    margin-bottom: 44px;
+     font-family: 'Quicksand-Semibold';
+
  }
+
+ .input-container {
+     display: flex;
+     align-items: center;
+     justify-content: flex-end;
+     border: none;
+     border-bottom: 1px solid black;
+     outline: none;
+ }
+
+
+.input-container #nome {
+    border: none;
+    outline: none;
+}
+
+.input-container #senha {
+    border: none;
+    outline: none;
+}
  
  .input-group label {
     display: block;
@@ -54,29 +92,38 @@
  .input-group input {
     width: 100%;
     padding: 10px 0;
-    font-size: 16px;
-    border: none;
-    border-bottom: 2px solid black;
-    outline: none;
-    border-radius: 0;
+     font-family: Quicksand-Semibold;
+    font-size: 12px;
+     background-color: #FCFAFF;
+
  }
- 
- .input-group input:focus {
-    border-bottom: 3px solid black;
+
+ .input-group .icon-user {
+     width: 16px;
+     height: 16px;
+
  }
+
+ .input-group .icon-lock {
+     width: 16px;
+     height: 16px;
+ }
+
+
  
  .input-group i {
     position: absolute;
     right: 10px;
     top: 35px;
-    font-size: 18px;
+    font-size: 12px;
     color: #888;
  }
  
  button {
+     font-family: Quicksand-Bold;
     width: 100%;
     padding: 10px;
-    font-size: 16px;
+    font-size: 14px;
     background-color: #5157FF;
     color: white;
     border: none;
@@ -89,6 +136,7 @@
  }
  
  p {
+     font-family: Quicksand-Regular;
     margin-top: 20px;
     font-size: 14px;
     text-align: left;
@@ -97,6 +145,7 @@
  p a {
     color: #5157FF;
     text-decoration: none;
+     font-family: Quicksand-Bold;
  }
  
  p a:hover {
