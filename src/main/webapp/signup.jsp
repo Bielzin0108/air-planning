@@ -43,36 +43,36 @@
     <div class="right-side">
         <div class="signup-box">
             <h2>Sign Up</h2>
-            <form action="#" method="post">
+            <form action="/signup" method="post">
                 <div class="signup-container">
                     <div class="input-group">
                         <div class="input-container">
-                            <input type="text" id="nome" placeholder="Nome">
+                            <input type="text" id="nome" name="nome" placeholder="Nome">
                             <img class="icon" src="img/user.png" alt="Ícone de usuário">
                         </div>
                     </div>
                     <div class="input-group">
                         <div class="input-container">
-                            <input type="text" id="numero" placeholder="Número"
+                            <input type="text" id="numero" name="numero" placeholder="Número"
                                    oninput="this.value = formatCelular(this.value)">
                             <img class="icon" src="img/telephone.png" alt="Ícone de telefone">
                         </div>
                     </div>
                     <div class="input-group">
                         <div class="input-container">
-                            <input type="email" id="email" placeholder="E-mail">
+                            <input type="email" id="email" name="email" placeholder="E-mail">
                             <img class="icon" src="img/mail.png" alt="Ícone de email">
                         </div>
                     </div>
                     <div class="input-group">
                         <div class="input-container">
-                            <input type="password" id="senha" placeholder="Senha">
+                            <input type="password" id="senha" name="senha" placeholder="Senha">
                             <img class="icon" src="img/lock.png" alt="Ícone de cadeado">
                         </div>
                     </div>
                     <div class="input-group">
                         <div class="input-container">
-                            <input type="text" id="cpf" placeholder="CPF" oninput="onCPFInput(event)">
+                            <input type="text" id="cpf" name="cpf" placeholder="CPF" oninput="onCPFInput(event)">
                             <img class="icon" src="img/id-card.png" alt="Ícone de identificação">
                         </div>
                     </div>

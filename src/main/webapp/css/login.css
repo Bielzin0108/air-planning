@@ -59,6 +59,8 @@
      flex-direction: column;
     margin-bottom: 44px;
      font-family: 'Quicksand-Semibold';
+     border: none;
+     outline: none;
 
  }
 
@@ -76,12 +78,7 @@ input::placeholder {
 }
 
 
-.input-container #nome {
-    border: none;
-    outline: none;
-}
-
-.input-container #senha {
+.input-container input {
     border: none;
     outline: none;
 }

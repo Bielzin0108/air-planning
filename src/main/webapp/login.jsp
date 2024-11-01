@@ -10,17 +10,17 @@
     <div class="container">
         <div class="login-box">
             <h2>Login</h2>
-            <form action="#" method="post">
+            <form action="/login" method="post">
                 <div class="input-group">
                     <div class="input-container">
-                    <input type="text" id="nome" placeholder="Nome" required>
-                    <img class="icon-user" src="img/user.png" alt="Icone de user">
+                        <input type="text" name="email" placeholder="Email" required>
+                        <img class="icon-user" src="img/user.png" alt="Ícone de usuário">
                     </div>
                 </div>
                 <div class="input-group">
                     <div class="input-container">
-                    <input type="password" id="senha" placeholder="Senha" required>
-                    <img class="icon-lock" src="img/lock.png" alt="Icone de lock">
+                        <input type="password" name="senha" placeholder="Senha" required>
+                        <img class="icon-lock" src="img/lock.png" alt="Ícone de bloqueio">
                     </div>
                 </div>
                 <button type="submit">Login</button>

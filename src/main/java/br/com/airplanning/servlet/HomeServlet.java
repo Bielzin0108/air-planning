@@ -12,11 +12,10 @@ public class HomeServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/home.jsp").forward(req, resp);
+        if (req.getSession().getAttribute("user") != null) {
+            req.getRequestDispatcher("/home.jsp").forward(req, resp);
+        } else {
+            resp.sendRedirect("/login");
+        }
     }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
-    }
-}
+};

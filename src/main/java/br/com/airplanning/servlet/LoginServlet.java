@@ -27,7 +27,6 @@ public class LoginServlet extends HttpServlet {
 
         CustomerRepository customerRepository = new CustomerRepository();
 
-        // Chama o método findCustomerByEmail para buscar o e-mail fornecido no cadastro em nosso BD.
         Customer customer = customerRepository.findCustomerByEmail(email);
 
 

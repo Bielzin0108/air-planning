@@ -23,7 +23,6 @@ public class SignUpServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
 
         String nome = req.getParameter("nome");
 
@@ -34,6 +33,13 @@ public class SignUpServlet extends HttpServlet {
         String senha = req.getParameter("senha");
 
         String cpf = req.getParameter("cpf");
+
+        if (senha == null) {
+            System.out.println("Senha não foi enviada no formulário.");
+        } else {
+            System.out.println("Senha enviada: " + senha);
+        }
+
 
         String senhaCriptografada = null;
         try {
