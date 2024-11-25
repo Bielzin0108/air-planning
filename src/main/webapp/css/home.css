@@ -1,7 +1,18 @@
+@font-face {
+    font-family: Quicksand-Bold;
+    src: url(/fonts/Quicksand-Bold.ttf);
+}
+
+@font-face {
+    font-family: Quicksand-Regular;
+    src: url(/fonts/Quicksand-Regular.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Quicksand-Regular;
 }
 
 body {
@@ -53,7 +64,7 @@ header {
 }
 
 main {
-    padding: 40px;
+    padding: 86px;
 }
 
 .reservation {
@@ -81,7 +92,7 @@ main {
     background: none;
     border: none;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 15px;
     cursor: pointer;
     border-bottom: 2px solid transparent;
 }
@@ -91,33 +102,72 @@ main {
 }
 
 .input-group {
-    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
 }
 
 .input-group input {
-    width: 100%; 
-    padding: 15px; 
-    margin-bottom: 10px;
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+}
+
+.input-group input::placeholder {
+    font-size: 12px;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.input-group .icon {
+    width: 16px;
+    height: 16px;
+}
+
+.input-dates {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    gap: 18px;
+    outline: none;
+}
+
+.input-dates input {
+    width: 100%;
+    height: 44px;
+    padding: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    flex: 1;
+    font-size: 12px;
+    outline: none;
 }
 
-
-.input-group input:last-child {
-    margin-right: 0;
+.input-dates .icon {
+    width: 16px;
+    height: 16px;
 }
-
 
 button[type="submit"] {
-    width: 90px;
-    padding: 15px;
+    width: 150px;
+    height: 36px;
     background-color: #5157FF;
     color: white;
     border: none;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 12px;
     cursor: pointer;
-
+    font-family: Quicksand-Bold;
 }
 
 button[type="submit"]:hover {
@@ -125,32 +175,171 @@ button[type="submit"]:hover {
 }
 
 .promotion {
-    text-align: center;
-    margin-top: 40px;
+    margin: 124px 184px 120px;
+    text-align: left;
+}
+
+.promotion-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.icon-text {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.promotion .icon {
+    width: 20px;
+    height: 20px;
 }
 
 .promotion p {
+    width: 347px;
+    font-size: 12px;
+    font-family: Quicksand-Bold;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.offers-container {
+    margin-left: 184px;
+    margin-right: 184px;
+}
+
+.offers-header .offers-title {
+    font-size: 32px;
+    font-family: Quicksand-Bold;
+}
+
+.offers-header .offers-subtitle {
+    margin-top: 8px;
     font-size: 14px;
 }
 
-.icon-plane {
-    margin-right: 10px;
-    font-size: 16px;
-}
-.input-group.dates {
-    display: flex;
-    justify-content: space-between; 
-    gap: 10px; 
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
-.input-group.dates input {
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+}
+
+.card img {
     width: 100%;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    flex: 1; 
+    height: 160px;
+    object-fit: cover;
 }
 
-.input-group.dates input:first-child {
-    margin-right: 10px; 
+.card-content {
+    padding: 6px 15px 15px 15px;
 }
+
+.card-content h2 {
+    font-size: 18px;
+    font-family: Quicksand-Bold;
+}
+
+.card-content p {
+    color: black;
+    margin-bottom: 14px;
+    font-size: 12px;
+    font-family: Quicksand-Regular;
+}
+
+.card-content .flight-date {
+    margin-bottom: 4px;
+    font-family: Quicksand-Bold;
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+}
+
+.flight-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.flight-details {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.flight-details img {
+    width: 24px;
+    height: auto;
+    object-fit: contain;
+    margin-right: 8px;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+
+.flight-type {
+    font-size: 14px;
+    font-family: Quicksand-Bold;
+    font-weight: bold;
+    color: black;
+}
+
+.price {
+    display: flex;
+    color: #5a67ff;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 10px;
+    justify-content: flex-end;
+    align-items: center;
+
+    img {
+        width: 10px;
+        height: 10px;
+        margin-top: 4px;
+        margin-left: 2px;
+    }
+}
+
+.info-container {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 96px;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 22px;
+    gap: 10px;
+}
+
+.info-container img {
+    width: 14px;
+    height: 14px;
+}
+
+.info-container p {
+    margin: 0;
+}
+
+
+

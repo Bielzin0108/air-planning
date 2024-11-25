@@ -11,7 +11,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: Quicksand-Regular;
 }
 
 body {
@@ -20,7 +20,6 @@ body {
 
 
 header {
-  max-width: 1440px;
   width: 100%;
   background-color: #3b59ff;
   padding: 30px 10px;
@@ -155,6 +154,7 @@ h1 {
 .card-content h2 {
   font-size: 18px;
   margin-bottom: 5px;
+  font-family: Quicksand-Bold;
 }
 
 .card-content p {
@@ -162,12 +162,13 @@ h1 {
   margin-bottom: 14px;
   font-size: 12px;
   font-weight: bold;
+  font-family: Quicksand-Regular;
 }
 
 .price {
-  font-weight: bold;
   color: #5a67ff;
   font-size: 16px;
+  font-family: Quicksand-Bold;
 }
 
 
@@ -225,11 +226,7 @@ footer {
 .footer-menu ul li a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
-}
-
-.footer-menu ul li a:hover {
-  text-decoration: underline;
+  font-size: 14px;
 }
 
 .footer-copyright {
@@ -237,7 +234,7 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 12px;
+  font-size: 10px;
   width: 100%;
   padding-top: 44px;
   padding-left: 72px;
