@@ -313,7 +313,44 @@
                 encontradas nos últimos quatro dias e estão sujeitas a alterações.</p>
         </div>
 
+        <section class="section-container">
+            <div class="section-header">
+                <h1>Buscando as melhores passagens aéreas para qualquer lugar do mundo?</h1>
+                <p>
+                    Tudo é muito simples por aqui. São 100 milhões de viajantes usando nossa plataforma para comparar
+                    preços em mais de 1.200 companhias aéreas e fornecedores de viagens. Com tantas opções em um só
+                    lugar, você economiza e dá adeus ao estresse — saiba como.
+                </p>
+            </div>
+            <div class="cards-wrapper">
+                <div class="card-tips">
+                    <img src="img/globe.svg" alt="Ícone do mundo">
+                    <h3>Faça uma busca para "o mundo inteiro" e explore todos os destinos</h3>
+                    <p>
+                        Insira o aeroporto de partida e as datas da viagem e clique em "o mundo inteiro". Você verá voos
+                        para todos os destinos do mundo, os mais baratos primeiro.
+                    </p>
+                </div>
+                <div class="card-tips">
+                    <img src="img/cards.svg" Ícone de preços">
+                    <h3>Pague menos e vá mais longe com preços transparentes</h3>
+                    <p>
+                        As ofertas mais baratas de passagens aéreas. Sem taxas ocultas. Sem brincadeiras. Conosco, o
+                        preço que você vê nas suas buscas é o que você pagará.
+                    </p>
+                </div>
+                <div class="card-tips">
+                    <img src="img/clock.svg" alt="Ícone do relógio">
+                    <h3>Garanta a melhor reserva com os alertas de preços</h3>
+                    <p>
+                        Encontrou seu voo, mas ainda não é hora de fazer a compra? Crie alertas de preço e nós
+                        avisaremos você quando o preço da passagem aérea aumentar ou diminuir.
+                    </p>
+                </div>
+            </div>
+        </section>
     </div>
+
 
 </main>
 

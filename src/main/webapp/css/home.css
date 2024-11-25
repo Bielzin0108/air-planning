@@ -341,5 +341,77 @@ button[type="submit"]:hover {
     margin: 0;
 }
 
+.section-container {
+    background-color: #e9f0ff;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 88px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+    margin-bottom: 32px;
+}
+
+.section-header h1 {
+    font-size: 28px;
+    font-family: Quicksand-Bold;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.section-header p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 720px;
+}
+
+.cards-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.card-tips {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    height: 360px;
+    flex: 1;
+    max-width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-tips:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.card-tips img {
+    width: 80px;
+    margin-bottom: 16px;
+}
+
+.card-tips h3 {
+    font-size: 18px;
+    font-family: Quicksand-Bold;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.card-tips p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
 
 
