@@ -349,6 +349,31 @@
                 </div>
             </div>
         </section>
+
+        <div class="mission-container">
+            <p class="mission-title">Planeje sua jornada com tranquilidade</p>
+            <p class="mission-subtitle">A nossa missão é ajudar você a reservar seus voos com confiança e tornar a sua
+                viagem a mais tranquila
+                possível.</p>
+
+        </div>
+        <div class="feature-container">
+            <div class="feature-item">
+                <img src="img/flexible-flights-icon.png" alt="Ícone de flexibilidade">
+                <div>
+                    <h3>Encontre ofertas de passagens aéreas flexíveis</h3>
+                    <p>Explore as ofertas de passagens aéreas flexíveis para que você não perca nada se o seu voo for
+                        alterado ou cancelado</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <img src="img/bed.png" alt="Bed Icon">
+                <div>
+                    <h3>Adicione hotéis e aluguel de carros</h3>
+                    <p>Planeje sua viagem com hotéis e aluguel de carros, e mantenha suas reservas em um só lugar</p>
+                </div>
+            </div>
+        </div>
     </div>
 
 
