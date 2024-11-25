@@ -175,8 +175,8 @@ button[type="submit"]:hover {
 }
 
 .promotion {
-    margin: 124px 184px 120px;
     text-align: left;
+    margin: 100px 80px;
 }
 
 .promotion-content {
@@ -197,17 +197,17 @@ button[type="submit"]:hover {
 }
 
 .promotion p {
-    width: 347px;
+    min-width: 247px;
     font-size: 12px;
     font-family: Quicksand-Bold;
     font-weight: bold;
-    margin: 0;
     line-height: 1.5;
+    margin-right: 24px;
 }
 
 .offers-container {
-    margin-left: 184px;
-    margin-right: 184px;
+    margin-left: 126px;
+    margin-right: 126px;
 }
 
 .offers-header .offers-title {
@@ -320,6 +320,11 @@ button[type="submit"]:hover {
     }
 }
 
+.info-wrapper {
+    margin-left: 84px;
+    margin-right: 84px;
+}
+
 .info-container {
     display: flex;
     align-items: flex-start;
@@ -383,9 +388,8 @@ button[type="submit"]:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 20px;
-    height: 360px;
+    min-height: 430px;
     flex: 1;
-    max-width: 280px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -396,7 +400,8 @@ button[type="submit"]:hover {
 }
 
 .card-tips img {
-    width: 80px;
+    width: 90px;
+    height: 90px;
     margin-bottom: 16px;
 }
 

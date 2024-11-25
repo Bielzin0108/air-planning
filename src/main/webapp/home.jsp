@@ -312,7 +312,9 @@
                 próximos três meses. Essas tarifas têm descontos maiores quando comparadas ao preço médio. Todas foram
                 encontradas nos últimos quatro dias e estão sujeitas a alterações.</p>
         </div>
+    </div>
 
+    <div class="info-wrapper">
         <section class="section-container">
             <div class="section-header">
                 <h1>Buscando as melhores passagens aéreas para qualquer lugar do mundo?</h1>
@@ -331,6 +333,14 @@
                         para todos os destinos do mundo, os mais baratos primeiro.
                     </p>
                 </div>
+                <div class="card-tips">
+                    <img src="img/vacation.png" alt="Ícone do mundo">
+                    <h3>Descubra destinos incríveis ao redor do globo</h3>
+                    <p>
+                        Explore as opções de viagem mais populares e surpreendentes. Com apenas alguns cliques, encontre passagens acessíveis para lugares que você sempre quis conhecer.
+                    </p>
+                </div>
+
                 <div class="card-tips">
                     <img src="img/cards.svg" Ícone de preços">
                     <h3>Pague menos e vá mais longe com preços transparentes</h3>
