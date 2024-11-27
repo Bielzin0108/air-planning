@@ -1,12 +1,14 @@
-  @font-face {
-    font-family: Quicksand-Bold;
-    src: url(/fonts/Quicksand-Bold.ttf);
-  }
-  @font-face {
-    font-family: Quicksand-Regular;
-    src: url(/fonts/Quicksand-Regular.ttf);
-  }
+/* Font-Face Declarations */
+@font-face {
+  font-family: Quicksand-Bold;
+  src: url(/fonts/Quicksand-Bold.ttf);
+}
+@font-face {
+  font-family: Quicksand-Regular;
+  src: url(/fonts/Quicksand-Regular.ttf);
+}
 
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -18,68 +20,13 @@ body {
   background-color: #f0f0f0;
 }
 
-
+/* Header Styles */
 header {
   width: 100%;
   background-color: #3b59ff;
   padding: 30px 10px;
   margin-bottom: 10px;
 }
-
-.header-content {
-  padding: 40px;
-  padding-left: 56px;
-}
-
-
-
-h1 {
-  margin-top: 0;
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: black;
-  font-family: Quicksand-Bold;
-}
-
-
-.buttons {
-  display: flex;
-  gap: 10px;
-  margin-top: 5px;
-}
-
-.btn-esquerdo {
-  background-color: #5a67ff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.btn-esquerdo:hover {
-  background-color: #4e5dfc;
-}
-
-.btn-direito {
-  background-color: white;
-  color: black;
-  border: 1px solid #777;
-  padding: 10px 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-}
-
-.btn-direito:hover {
-  background-color: black;
-  color: white;
-  border-color: black;
-}
-
 
 .search-bar {
   display: flex;
@@ -123,7 +70,65 @@ h1 {
   margin-right: 10px;
 }
 
+/* Page Content */
+.pagina-usuario {
+  padding-left: 68px;
+  padding-right: 68px;
+}
 
+.header-content {
+  padding: 40px;
+  padding-left: 56px;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: black;
+  font-family: Quicksand-Bold;
+}
+
+/* Button Styles */
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.btn-esquerdo,
+.btn-direito {
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-esquerdo {
+  background-color: #5a67ff;
+  color: white;
+  border: none;
+}
+
+.btn-esquerdo:hover {
+  background-color: #4e5dfc;
+}
+
+.btn-direito {
+  background-color: white;
+  color: black;
+  border: 1px solid #777;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-direito:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+/* Card Styles */
 .card-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -171,36 +176,12 @@ h1 {
   font-family: Quicksand-Bold;
 }
 
-
+/* Footer Styles */
 footer {
   text-align: start;
   margin-top: 20px;
   color: #777;
   font-size: 14px;
-}
-
-
-
-@media (max-width: 900px) {
-  .card-container {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0 20px;
-  }
-
-  .search-box {
-    width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .card-container {
-    grid-template-columns: 1fr;
-    padding: 0 10px;
-  }
-
-  .search-box {
-    width: 100%;
-  }
 }
 
 .footer-menu {
@@ -248,7 +229,6 @@ footer {
   padding-right: 56px;
   font-size: 12px;
   font-weight: bold;
-
 }
 
 .price-text {
@@ -256,10 +236,25 @@ footer {
   margin-top: 44px;
 }
 
+/* Media Queries */
+@media (max-width: 900px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px;
+  }
 
+  .search-box {
+    width: 100%;
+  }
+}
 
+@media (max-width: 600px) {
+  .card-container {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
 
-.pagina-usuario {
-  padding-left: 68px;
-  padding-right: 68px;
+  .search-box {
+    width: 100%;
+  }
 }

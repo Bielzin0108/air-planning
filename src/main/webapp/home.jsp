@@ -8,22 +8,28 @@
 </head>
 <body>
 <header>
-    <div class="logo"></div>
-    <nav class="menu">
+    <div class="logo">
+        <img src="img/logo.png" alt="Logo">
+    </div>
+    <div class="menu">
         <ul>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Ajuda</a></li>
         </ul>
-    </nav>
+    </div>
     <div class="user-menu">
-        <a href="#">Log in</a>
+        <a href="#" class="login">Log in</a>
         <span class="menu-icon">Menu</span>
     </div>
 </header>
 
-<main>
+<section class="hero">
+    <div class="hero-overlay">
+        <h1>As melhores passagens aéreas para qualquer lugar do mundo</h1>
+        <p>Encontre voos baratos, reserve com segurança e planeje sua próxima viagem com facilidade.</p>
+    </div>
     <section class="reservation">
         <h1>Reserve seu voo</h1>
         <div class="tabs">
@@ -68,17 +74,13 @@
                 </div>
                 <input type="text" placeholder="Passageiro">
             </div>
-
-            <div class="input-group">
-                <div class="icon-container">
-                    <img class="icon" src="img/ticket.png" alt="Promotion Icon">
-                </div>
-                <input type="text" placeholder="Promoções">
-            </div>
-
             <button type="submit">Procurar</button>
         </form>
     </section>
+</section>
+
+<main>
+
 
     <section class="promotion">
         <div class="promotion-content">
@@ -337,7 +339,8 @@
                     <img src="img/vacation.png" alt="Ícone do mundo">
                     <h3>Descubra destinos incríveis ao redor do globo</h3>
                     <p>
-                        Explore as opções de viagem mais populares e surpreendentes. Com apenas alguns cliques, encontre passagens acessíveis para lugares que você sempre quis conhecer.
+                        Explore as opções de viagem mais populares e surpreendentes. Com apenas alguns cliques, encontre
+                        passagens acessíveis para lugares que você sempre quis conhecer.
                     </p>
                 </div>
 
@@ -384,10 +387,111 @@
                 </div>
             </div>
         </div>
+
+        <div class="faq-section">
+            <h2>Perguntas frequentes sobre como encontrar ofertas de voos</h2>
+            <details class="faq-item">
+                <summary>Como encontro as melhores promoções de voos de última hora?</summary>
+                <p>
+                    Às vezes, vale a pena esperar até a última hora para ver se as companhias aéreas reduzem o preço dos
+                    assentos que restaram em seus voos, mas pode ser arriscado. Confira aqui algumas maneiras de
+                    conseguir
+                    uma ótima promoção de passagens aéreas uma ou duas semanas antes de voar usando a nossa busca de
+                    voos:
+                </p>
+                <p>
+                    Se o que importa é sair de férias e não o lugar, busque voos para "<b>o mundo inteiro</b>" para
+                    conferir os melhores
+                    voos em promoção para qualquer destino em um futuro próximo.
+                </p>
+                <p>
+                    Se você já decidiu o destino e quer encontrar os melhores voos em promoção para as próximas semanas,
+                    escolha "<b>mês inteiro</b>" ao fazer a busca e depois selecione o mês seguinte para encontrar o dia
+                    mais barato
+                    para voar.
+                </p>
+            </details>
+            <details class="faq-item">
+                <summary>Como posso acompanhar as ofertas de voos e tarifas baixas?</summary>
+                <p>
+                    Se você pensa em viajar, mas ainda não quer reservar, não se preocupe. Você pode ficar de olho nos
+                    preços
+                    de duas maneiras.
+                </p>
+                <p>
+                    Ative um <b>Alerta de preço</b> para monitorarmos os preços e avisarmos por e-mail caso eles
+                    aumentem ou
+                    diminuam.
+                </p>
+                <p>
+                    Vá mais longe: baixe nosso aplicativoe receba esses alertas de preços diretamente
+                    no celular.
+                </p>
+                <p>
+                    Inscreva-separa receber nossos e-mails com ofertas semanais de voos e conferir as
+                    novidades sobre as
+                    viagens diretamente na sua caixa de entrada!
+                </p>
+            </details>
+            <details class="faq-item">
+                <summary>O que acontece depois que eu reservar meu voo?</summary>
+                <p>
+                    Depois de selecionar seu voo, você fará a reserva diretamente com uma de nossas companhias aéreas ou
+                    agências parceiras, geralmente no site delas. O e-mail de confirmação da reserva do voo e todas as
+                    outras
+                    informações de que você precisa serão enviadas por elas.
+                </p>
+                <p>
+                    Ou, se você reservou diretamente com o Skyscanner, enviaremos a confirmação da reserva por e-mail.
+                    Se
+                    você reservou diretamente conosco, confira sua conta no nosso site ou aplicativo para ver as
+                    informações
+                    da reserva. Você também pode falar com nossa equipe de Atendimento ao Cliente se precisar de ajuda.
+                </p>
+            </details>
+            <details class="faq-item">
+                <summary>Para qual destino devo reservar um voo no momento?</summary>
+                <p>
+                    São Paulo está em alta entre os viajantes no momento. Se você precisa de mais inspiração, busque no
+                    mundo inteiro
+                    para encontrar as melhores promoções de voos para qualquer lugar.
+                </p>
+            </details>
+        </div>
     </div>
-
-
 </main>
+<footer>
+    <div class="footer-text">
+        <p class="price-text">Preços de passagens aéreas por viajante e nossas estimativas mais baixas se baseiam
+            nas
+            tarifas mais recentes. Os preços de hotéis são calculados com base no preço mais barato por noite de um
+            hotel
+            de 4 estrelas para as datas selecionadas.</p> <br/>
+        <p>Estas são as estimativas de preço mais baixas para passagens aéreas da classe Econômica para um viajante.
+            Os
+            preços são baseados nas tarifas mais recentes. Aviso de isenção de responsabilidade: alguns desses
+            filtros são
+            uma tecnologia experimental derivada do ChatGPT. Algumas respostas podem não ser verificadas ou
+            confiáveis.
+            Esta ferramenta se destina apenas para inspiração de viagem. Os viajantes devem consultar as orientações
+            do
+            governo ao planejar uma viagem.</p>
+    </div>
+    <div class="footer-menu">
+        <ul>
+            <li><a href="#">Quem somos</a></li>
+            <li><a href="#">Entrar</a></li>
+            <li><a href="/home.jsp">Home</a></li>
+        </ul>
+        <div class="footer-copyright">
+            <p>Todos os direitos reservados. Este site ou qualquer parte dele não pode ser reproduzido ou usado de
+                forma
+                alguma sem autorização expressa, por escrito, do autor ou editor, exceto pelo uso de citações breves
+                em uma
+                resenha de ebook.</p>
+        </div>
+    </div>
+</footer>
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
