@@ -1,0 +1,264 @@
+@font-face {
+    font-family: Quicksand-Bold;
+    src: url(/fonts/Quicksand-Bold.ttf);
+}
+
+@font-face {
+    font-family: Quicksand-Regular;
+    src: url(/fonts/Quicksand-Regular.ttf);
+}
+
+main {
+    padding: 22px 86px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Quicksand-Regular;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #5157FF;
+    padding: 20px 40px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    background: #5157FF;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.menu ul li a:hover {
+    transform: translateY(-5px);
+    background: #4045E0;
+    color: #000000;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-menu .login {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background: #4045e0;
+    padding: 8px 16px;
+    border-radius: 16px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.user-menu .login:hover {
+    background: #3038b8;
+    transform: scale(1.1);
+}
+
+.user-menu .menu-icon {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.flights-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    font-family: Arial, sans-serif;
+    padding-bottom: 300px;
+}
+
+.flights-container h1 {
+    font-size: 32px;
+    font-family: Quicksand-Bold;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.tabs {
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    background-color: #5157FF;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tabs button.active-tab {
+    background-color: #4045E0;
+}
+
+.tabs button:hover {
+    background-color: #4045E0;
+}
+
+.flights-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.flights-table th,
+.flights-table td {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.flights-table th {
+    font-size: 18px;
+    font-family: Quicksand-Bold;
+    color: #000000;
+}
+
+.details-button {
+    background-color: #5157FF;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.details-button:hover {
+    background-color: #4045E0;
+    transform: scale(1.05);
+}
+
+.delete-button img {
+    width: 18px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.delete-button img {
+    width: 18px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.delete-button:hover img {
+    animation: jump 0.5s ease;
+}
+
+.delete-button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+footer {
+    text-align: start;
+    margin-top: 20px;
+    color: #777;
+    font-size: 14px;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #3b59ff;
+    padding: 44px;
+    margin-top: 78px;
+}
+
+.footer-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+    margin-left: 76px;
+}
+
+.footer-menu ul li {
+    margin: 10px 0;
+}
+
+.footer-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 10px;
+    width: 100%;
+    padding-top: 44px;
+    padding-left: 72px;
+    padding-right: 72px;
+    color: white;
+    font-family: Quicksand-Bold;
+}
+
+.footer-text {
+    padding-left: 56px;
+    padding-right: 56px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 64px;
+    margin-left: 64px;
+}
+
+.price-text {
+    margin-bottom: 44px;
+    margin-top: 44px;
+}
