@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>Title</title>
@@ -44,52 +45,23 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>VVI - GRU - Rio de Janeiro</td>
-            <td>
-                <button class="details-button">Ver mais detalhes</button>
-            </td>
-            <td>
-                <button class="delete-button">
-                    <img src="/img/recycle-bin.png" alt="Recycle bin">
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td>SCL - GRU - Bolivia</td>
-            <td>
-                <button class="details-button">Ver mais detalhes</button>
-            </td>
-            <td>
-                <button class="delete-button">
-                    <img src="/img/recycle-bin.png" alt="Recycle bin">
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td>NYC - GRU - New York</td>
-            <td>
-                <button class="details-button">Ver mais detalhes</button>
-            </td>
-            <td>
-                <button class="delete-button">
-                    <img src="/img/recycle-bin.png" alt="Recycle bin">
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td>CON - GRU - Minas Gerais</td>
-            <td>
-                <button class="details-button">Ver mais detalhes</button>
-            </td>
-            <td>
-                <button class="delete-button">
-                    <img src="/img/recycle-bin.png" alt="Recycle bin">
-                </button>
-            </td>
-        </tr>
+        <c:forEach var="flight" items="${flights}">
+            <tr>
+                <td>${flight.origin}</td>
+                <td>
+                    <button class="details-button"><a href="/detalhes-voos?flightId=${flight.id}">Ver mais
+                        detalhes</a></button>
+                </td>
+                <td>
+                    <button class="delete-button">
+                        <img src="/img/recycle-bin.png" alt="Recycle bin">
+                    </button>
+                </td>
+            </tr>
+        </c:forEach>
         </tbody>
     </table>
+
 </div>
 <footer>
     <div class="footer-text">

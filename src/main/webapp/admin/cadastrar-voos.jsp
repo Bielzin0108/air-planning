@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,95 +9,70 @@
     <link rel="stylesheet" href="/admin/css/cadastrar-voos.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="admin-info">
-                <span>Admin</span>
-            </div>
-            <div class="nav-links">
-                <a href="#">Logout</a>
-            </div> 
+<header>
+    <div class="container">
+        <div class="admin-info">
+            <span>Admin</span>
         </div>
-    </header>
-
-    <main>
-        <h1>Cadastrar um voo</h1>
-        <form class="flight-form">
-
-
-            <div class="form-group">
-                <label for="voo">Voo</label>
-                
-            </div>
-            <div class="icones-plus"><a href="#" class="icon">+</a></div>
-
-            <!--linha de separação-->
-            <div class="separator"></div>
-
-            <div class="form-group">
-                <label for="numero">Número do voo</label>            
-                
-            </div>
-            <div class="icones-plus"><a href="#" class="icon">+</a></div>
-
-            <!--linha de separação-->
-            <div class="separator"></div>
-
-            <div class="form-group">
-                <label for="partida">Horário de partida</label>
-                
-                
-            </div>
-            <div class="icones-plus"><a href="#" class="icon">+</a></div>
-
-            <!--linha de separação-->
-            <div class="separator"></div>
-
-            <div class="form-group">
-                <label for="chegada">Horário de chegada</label>
-                
-                
-            </div>
-            <div class="icones-plus"><a href="#" class="icon">+</a></div>
-
-            <!--linha de separação-->
-            <div class="separator"></div>
-
-            <div class="form-group">
-                <label for="preco">Preço</label>
-                
-                
-            </div>
-            <div class="icones-plus"><a href="#" class="icon">+</a></div>
-
-            <!--linha de separação-->
-            <div class="separator"></div>
-
-            <div class="form-group">
-                <label for="assentos">Assentos disponíveis</label>
-            </div>
-                <div class="icones-plus"><a href="#" class="icon">+</a></div>
-            
-
-             <!--linha de separação-->
-             <div class="separator"></div>
-
-
-
-        </form>
-    </main>
-
-    <footer>
-        <div class="footer-menu">
-            <ul>
-                <li><a href="#">Quem somos</a></li>
-                <li><a href="#">Entrar</a></li>
-                <li><a href="#">Home</a></li>
-            </ul>
+        <div class="nav-links">
+            <a href="#">Logout</a>
         </div>
-        <div class="footer-copyright">
-            <p>Todos os direitos reservados. Este site ou qualquer parte dele não pode ser reproduzido ou usado de forma alguma sem autorização expressa, por escrito, do autor ou editor, exceto pelo uso de citações breves em uma resenha de ebook.</p>
+    </div>
+</header>
+
+<main>
+    <h1>Cadastrar um voo</h1>
+    <form class="flight-form" action="/cadastrar-voos" method="post">
+        <div class="form-group">
+            <label for="voo">Número do voo</label>
+            <input name="flightNumber" id="voo" class="input-container" type="text"/>
         </div>
-    </footer>
+        <div class="form-group">
+            <label for="partida">Horário de partida</label>
+            <input id="partida" name="departureDateTime" class="input-container" type="datetime-local"/>
+        </div>
+
+        <div class="form-group">
+            <label for="chegada">Horário de chegada</label>
+            <input id="chegada" name="arrivalDateTime" class="input-container" type="datetime-local"/>
+        </div>
+
+        <div class="form-group">
+            <label for="origem">Origem</label>
+            <input id="origem" name="origin" class="input-container" type="text"/>
+        </div>
+
+        <div class="form-group">
+            <label for="preco">Preço</label>
+            <input id="preco" name="price" class="input-container" type="number"/>
+        </div>
+
+        <div class="form-group">
+            <label for="destinationSelect">Selecione os destinos:</label>
+            <select id="destinationSelect" name="destinationId" class="form-control">
+                <c:forEach var="destination" items="${destinations}">
+                    <option value="${destination.id}">
+                            ${destination.city}, ${destination.country}
+                    </option>
+                </c:forEach>
+            </select>
+        </div>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+</main>
+
+<footer>
+    <div class="footer-menu">
+        <ul>
+            <li><a href="#">Quem somos</a></li>
+            <li><a href="#">Entrar</a></li>
+            <li><a href="#">Home</a></li>
+        </ul>
+    </div>
+    <div class="footer-copyright">
+        <p>Todos os direitos reservados. Este site ou qualquer parte dele não pode ser reproduzido ou usado de forma alguma sem autorização expressa, por escrito, do autor ou editor, exceto pelo uso de citações breves em uma resenha de ebook.</p>
+    </div>
+</footer>
 </body>
 </html>

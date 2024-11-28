@@ -8,34 +8,34 @@
     <link rel="stylesheet" href="/admin/css/gerenciar-voos.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="admin-info">
-                <span>Admin</span>
-            </div>
-            <div class="nav-links">
-                <a href="#">Logout</a>
-            </div>
+<header>
+    <div class="container">
+        <div class="admin-info">
+            <span>Admin</span>
         </div>
-    </header>
+        <div class="nav-links">
+            <a href="#">Logout</a>
+        </div>
+    </div>
+</header>
 <div>
     <div class="buttons">
         <button><a href="/admin/cadastrar-voos">Cadastrar Voo</a></button>
-        <button>Editar Voo</button>
+        <button><a href="/visualizar-voos">Listar Voo</a></button>
     </div>
 </div>
 
-        <footer>
-        <div class="footer-menu">
-            <ul>
-                <li><a href="#">Quem somos</a></li>
-                <li><a href="#">Entrar</a></li>
-                <li><a href="#">Home</a></li>
-            </ul>
-        </div>
-        <div class="footer-copyright">
-            <p>Todos os direitos reservados. Este site ou qualquer parte dele não pode ser reproduzido ou usado de forma alguma sem autorização expressa, por escrito, do autor ou editor, exceto pelo uso de citações breves em uma resenha de ebook.</p>
-        </div>
-    </footer>
+<footer>
+    <div class="footer-menu">
+        <ul>
+            <li><a href="#">Quem somos</a></li>
+            <li><a href="#">Entrar</a></li>
+            <li><a href="#">Home</a></li>
+        </ul>
+    </div>
+    <div class="footer-copyright">
+        <p>Todos os direitos reservados. Este site ou qualquer parte dele não pode ser reproduzido ou usado de forma alguma sem autorização expressa, por escrito, do autor ou editor, exceto pelo uso de citações breves em uma resenha de ebook.</p>
+    </div>
+</footer>
 </body>
 </html>

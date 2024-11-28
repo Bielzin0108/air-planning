@@ -53,11 +53,10 @@ h1 {
 }
 .form-group {
     display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 5px;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 16px;
     position: relative;
+
 }
 label {
     flex: 1;
@@ -124,4 +123,12 @@ footer {
     font-size: 12px;
     max-width: 800px;
     margin: 0 auto;
+}
+
+.input-container {
+    border: none;
+    border-bottom: 2px solid #000;
+    background: none;
+    width: 450px;
+    outline: none;
 }
