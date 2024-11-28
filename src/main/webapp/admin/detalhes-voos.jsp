@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -19,6 +18,7 @@
             </div>
         </div>
     </header>
+
     <main class="container">
         <h1>Detalhes do voo</h1>
         <div class="details-box">
@@ -48,6 +48,7 @@
             </div>
         </div>
     </main>
+
     <footer>
         <div class="footer-menu">
             <ul>
