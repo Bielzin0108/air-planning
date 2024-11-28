@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia para Turistas em Nova York</title>
-    <link rel="stylesheet" href="css/blogNY.css">
+    <link rel="stylesheet" href="css/blog-ny.css">
 </head>
 <body>
 <header class="header">

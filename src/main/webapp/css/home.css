@@ -24,10 +24,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #5157FF; /* Cor principal */
+    background: #5157FF;
     padding: 20px 40px;
     color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 10;
@@ -40,13 +40,13 @@ header {
 .menu ul {
     display: flex;
     list-style: none;
-    gap: 20px; /* Espaçamento entre os itens */
+    gap: 20px;
     margin: 0;
     padding: 0;
 }
 
 .menu ul li a {
-    display: inline-block; /* Para o translate funcionar corretamente */
+    display: inline-block;
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -57,22 +57,22 @@ header {
 }
 
 .menu ul li a:hover {
-    transform: translateY(-5px); /* Faz o elemento "pular" para cima */
-    background: #4045E0; /* Leve mudança de cor no fundo */
+    transform: translateY(-5px);
+    background: #4045E0;
     color: #000000;
 }
 
 .user-menu {
     display: flex;
     align-items: center;
-    gap: 20px; /* Espaçamento entre os itens */
+    gap: 20px;
 }
 
 .user-menu .login {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    background: #4045e0; /* Fundo do botão de login */
+    background: #4045e0;
     padding: 8px 16px;
     border-radius: 16px;
     transition: background 0.3s, transform 0.2s;
@@ -80,7 +80,7 @@ header {
 
 .user-menu .login:hover {
     background: #3038b8;
-    transform: scale(1.1); /* Leve aumento ao passar o mouse */
+    transform: scale(1.1);
 }
 
 .user-menu .menu-icon {

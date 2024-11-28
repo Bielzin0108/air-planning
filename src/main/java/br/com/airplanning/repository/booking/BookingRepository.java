@@ -116,6 +116,7 @@ public class BookingRepository {
 
         SQL = "DELETE FROM BOOKING WHERE ID = ?";
 
+
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
             preparedStatement.setObject(1, bookingId);

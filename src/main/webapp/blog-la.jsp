@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guia para Turistas em Los Angeles</title>
-  <link rel="stylesheet" href="css/blogLA.css">
+  <link rel="stylesheet" href="css/blog-la.css">
 </head>
 <body>
 <header class="header">
@@ -36,8 +36,8 @@
         </ul>
       </div>
       <div class="images">
-        <img src="<%= request.getContextPath() %>/images/calcadadafama.png" alt="Calçada da Fama">
-        <img src="<%= request.getContextPath() %>/images/universal.png" alt="Universal Studios">
+        <img src="/img/calcadadafama.png" alt="Calçada da Fama">
+        <img src="/img/universal.png" alt="Universal Studios">
       </div>
     </div>
   </section>

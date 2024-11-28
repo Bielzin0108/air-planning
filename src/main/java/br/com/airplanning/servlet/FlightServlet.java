@@ -13,12 +13,12 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 
-@WebServlet("/voos")
+@WebServlet("/cadastrar-voos")
 public class FlightServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("flights.jsp").forward(req, resp);
+        req.getRequestDispatcher("/admin/cadastrar-voos.jsp").forward(req, resp);
     }
 
     @Override
