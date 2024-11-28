@@ -1,0 +1,234 @@
+@font-face {
+    font-family: Quicksand-Bold;
+    src: url(/fonts/Quicksand-Bold.ttf);
+}
+
+@font-face {
+    font-family: Quicksand-Regular;
+    src: url(/fonts/Quicksand-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Quicksand-Regular;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #5157FF;
+    padding: 20px 40px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    background: #5157FF;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.menu ul li a:hover {
+    transform: translateY(-5px);
+    background: #4045E0;
+    color: #000000;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-menu .login {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background: #4045e0;
+    padding: 8px 16px;
+    border-radius: 16px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.user-menu .login:hover {
+    background: #3038b8;
+    transform: scale(1.1);
+}
+
+.user-menu .menu-icon {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.about-us {
+    width: 100%;
+    font-family: Quicksand-Regular;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+.about-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../img/about-us.png') no-repeat center center;
+    height: 550px;
+    background-size: cover;
+    padding: 0 20px;
+    color: white;
+}
+
+.about-header h1 {
+    font-size: 62px;
+    font-family: Quicksand-Bold;
+    max-width: 700px;
+    text-align: left;
+    margin-right: 228px;
+}
+
+.about-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 44px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    padding: 40px 20px;
+    gap: 100px;
+}
+
+.about-title h2 {
+    color: #5157FF;
+    font-family: Quicksand-Bold;
+    font-size: 44px;
+    margin-bottom: 10px;
+    text-align: left;
+    line-height: 1.375;
+}
+
+
+.about-text p {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 20px;
+    margin-top: 16px;
+    line-height: 1.6;
+    width: 608px;
+}
+
+.explorer-container {
+    background-image: url("/img/about-us-background.webp");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.explorer-container p {
+    font-size: 50px;
+    font-family: Quicksand-Bold;
+    max-width: 800px;
+    line-height: 1.375;
+    margin-bottom: 62px;
+}
+
+.explorer-container img {
+    width: 100px;
+    height: auto;
+}
+
+.sustainability-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e3f0ff;
+}
+
+.sustainability-content {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 400px;
+}
+
+.sustainability-content h2 {
+    font-size: 52px;
+    color: #000000;
+    margin-bottom: 20px;
+    line-height: 1.375;
+    font-family: Quicksand-Bold;
+}
+
+.sustainability-content p {
+    font-size: 18px;
+    color: #000000;
+}
+
+
+.sustainability-image {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sustainability-image img {
+    width: 100%;
+    max-width: 790px;
+    height: 650px;
+}
+
+.sustainability-image-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../img/about-us.png') no-repeat center center;
+    height: 550px;
+    background-size: cover;
+    padding: 0 20px;
+    color: white;
+}
+
+.sustainability-image-footer h1 {
+    font-size: 62px;
+    font-family: Quicksand-Bold;
+    max-width: 700px;
+    text-align: left;
+    margin-right: 228px;
+}
