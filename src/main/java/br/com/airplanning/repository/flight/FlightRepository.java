@@ -1,6 +1,7 @@
 package br.com.airplanning.repository.flight;
 
 import br.com.airplanning.config.ConnectionPoolConfig;
+import br.com.airplanning.dto.FlightFilterDto;
 import br.com.airplanning.model.Flight;
 import br.com.airplanning.model.Seats;
 
@@ -8,6 +9,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -69,6 +73,150 @@ public class FlightRepository {
         }
     }
 
+    public List<FlightFilterDto> getFlightByFilterUnique(String origin, String destinationCity, String destinationCountry, LocalDate departureDate) {
+        LocalDateTime departureDateTimeMin = departureDate.atStartOfDay();
+        LocalDateTime departureDateTimeMax = departureDate.atTime(LocalTime.MAX);
+
+        String sql = """
+                  SELECT
+                      FLIGHT.ID,
+                      FLIGHT.FLIGHT_NUMBER,
+                      FLIGHT.DEPARTURE_DATE_TIME,
+                      FLIGHT.ORIGIN,
+                      FLIGHT.PRICE,
+                      FLIGHT.DESTINATION_ID,
+                      DESTINATION.COUNTRY,
+                      DESTINATION.CITY
+                  FROM FLIGHT
+                  INNER JOIN DESTINATION ON FLIGHT.DESTINATION_ID = DESTINATION.ID
+                  WHERE FLIGHT.ORIGIN LIKE ?
+                    AND (DESTINATION.CITY LIKE ? OR DESTINATION.COUNTRY LIKE ?)
+                    AND FLIGHT.DEPARTURE_DATE_TIME BETWEEN ? AND ?
+                  """;
+
+        List<FlightFilterDto> flightsFiltered = new ArrayList<>();
+
+        try {
+            // Conexão com o banco de dados
+            Connection connection = ConnectionPoolConfig.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+            // Configuração dos parâmetros da consulta
+            preparedStatement.setString(1, origin);
+            preparedStatement.setString(2, destinationCity);
+            preparedStatement.setString(3, destinationCountry);
+            preparedStatement.setTimestamp(4, Timestamp.valueOf(departureDateTimeMin));
+            preparedStatement.setTimestamp(5, Timestamp.valueOf(departureDateTimeMax));
+
+            // Execução da consulta
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            // Processamento dos resultados
+            while (resultSet.next()) {
+                FlightFilterDto flightFilterDto = FlightFilterDto.builder()
+                        .id(resultSet.getObject("ID", UUID.class))
+                        .flightNumber(resultSet.getString("FLIGHT_NUMBER"))
+                        .departureDateTime(resultSet.getTimestamp("DEPARTURE_DATE_TIME").toLocalDateTime())
+                        .origin(resultSet.getString("ORIGIN"))
+                        .destinationId(resultSet.getObject("DESTINATION_ID", UUID.class))
+                        .country(resultSet.getString("COUNTRY"))
+                        .city(resultSet.getString("CITY"))
+                        .build();
+
+                flightsFiltered.add(flightFilterDto);
+            }
+
+            return flightsFiltered;
+        } catch (Exception e) {
+            System.out.println("Falha em buscar viagem pelo filtro");
+            throw new RuntimeException(e);
+        }
+    }
+
+    public List<FlightFilterDto> getFlightByFilterDepartureAndArrival(String origin, String destinationCity, String destinationCountry, LocalDate departureDate, LocalDate arrivalDate) {
+        LocalDateTime departureDateTimeMin = departureDate.atStartOfDay();
+
+        LocalDateTime departureDateTimeMax = departureDate.atTime(LocalTime.MAX);
+
+        LocalDateTime arrivalDateTimeMin = arrivalDate.atStartOfDay();
+
+        LocalDateTime arrivalDateTimeMax = arrivalDate.atTime(LocalTime.MAX);
+
+        String sql = """
+                          SELECT
+                                     FLIGHT.ID,
+                                     FLIGHT.FLIGHT_NUMBER,
+                                     FLIGHT.DEPARTURE_DATE_TIME,
+                                     FLIGHT.ARRIVAL_DATE_TIME,
+                                     FLIGHT.ORIGIN,
+                                     FLIGHT.PRICE,
+                                     FLIGHT.DESTINATION_ID,
+                                     DESTINATION.COUNTRY,
+                                     DESTINATION.CITY
+                                     FROM FLIGHT
+                          INNER JOIN DESTINATION ON FLIGHT.DESTINATION_ID = DESTINATION.ID
+                          WHERE FLIGHT.ORIGIN LIKE ?
+                          AND (DESTINATION.CITY LIKE ? OR DESTINATION.COUNTRY LIKE ?)
+                          AND FLIGHT.DEPARTURE_DATE_TIME BETWEEN ? AND ?
+                          AND FLIGHT.ARRIVAL_DATE_TIME BETWEEN ? AND ?
+                """;
+
+        List<FlightFilterDto> flightsFiltered = new ArrayList<>();
+
+        try {
+            Connection connection = ConnectionPoolConfig.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, origin);
+            preparedStatement.setString(2, destinationCity);
+            preparedStatement.setString(3, destinationCountry);
+            preparedStatement.setTimestamp(4, Timestamp.valueOf(departureDateTimeMin));
+            preparedStatement.setTimestamp(5, Timestamp.valueOf(departureDateTimeMax));
+            preparedStatement.setTimestamp(6, Timestamp.valueOf(arrivalDateTimeMin));
+            preparedStatement.setTimestamp(7, Timestamp.valueOf(arrivalDateTimeMax));
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                FlightFilterDto flightFilterDto = FlightFilterDto.builder()
+                        .id(resultSet.getObject("ID", UUID.class))
+                        .flightNumber(resultSet.getString("FLIGHT_NUMBER"))
+                        .departureDateTime(resultSet.getTimestamp("DEPARTURE_DATE_TIME").toLocalDateTime())
+                        .arrivalDateTime(resultSet.getTimestamp("ARRIVAL_DATE_TIME").toLocalDateTime())
+                        .origin(resultSet.getString("ORIGIN"))
+                        .destinationId(resultSet.getObject("DESTINATION_ID", UUID.class))
+                        .country(resultSet.getString("COUNTRY"))
+                        .city(resultSet.getString("CITY"))
+                        .build();
+
+                flightsFiltered.add(flightFilterDto);
+            }
+
+            return flightsFiltered;
+        } catch (Exception e) {
+            System.out.println("Falha em buscar viagem pelo filtro");
+            throw new RuntimeException(e);
+        }
+    }
+
+    public Integer countSeatsAvailableByFlightId(UUID flightId) {
+        String SQL = "SELECT COUNT(*) FROM FLIGHT INNER JOIN SEATS ON FLIGHT.ID = SEATS.FLIGHT_ID WHERE FLIGHT.ID = ? AND SEATS.AVAILABLE = ?";
+        try {
+            Connection connection = ConnectionPoolConfig.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setString(1, String.valueOf(flightId));
+            preparedStatement.setBoolean(2, true);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                return resultSet.getInt(1);
+            }
+
+            return 0;
+        } catch (Exception e) {
+            System.out.println("A busca pela contagem dos assentos disponiveis nao deu certo: " + e.getMessage());
+            throw new RuntimeException(e);
+        }
+    }
+
     public List<Flight> getAllFlights() {
         String SQL = "SELECT * FROM FLIGHT";
         List<Flight> flights = new ArrayList<>();
@@ -108,7 +256,7 @@ public class FlightRepository {
             Connection con = ConnectionPoolConfig.getConnection();
             PreparedStatement preparedStatement = con.prepareStatement(SQL);
             preparedStatement.setObject(1, flightId);
-                int rowsAffected = preparedStatement.executeUpdate();
+            int rowsAffected = preparedStatement.executeUpdate();
 
             if (rowsAffected > 0) {
                 isDeleted = true;

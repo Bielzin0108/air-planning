@@ -76,4 +76,31 @@ public class DestinationRepository {
 
         return destinations;
     }
+
+    public List<Destination> getAllDestinations() {
+        String SQL = "SELECT * FROM DESTINATION";
+        List<Destination> destinations = new ArrayList<>();
+
+        try {
+            Connection connection = ConnectionPoolConfig.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                Destination destination = new Destination(UUID.fromString(resultSet.getString("ID")),
+                        resultSet.getString("COUNTRY"),
+                        resultSet.getString("CITY"));
+
+                destinations.add(destination);
+            }
+            connection.close();
+
+        } catch (Exception e) {
+            System.out.println("Não foi possível buscar os destinos");
+            throw new RuntimeException(e);
+        }
+
+        return destinations;
+    }
+
 }

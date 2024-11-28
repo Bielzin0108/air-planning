@@ -9,7 +9,6 @@ import java.util.UUID;
 
 public class BookingRepository {
 
-     // Retorna true se deu ou false se deu errado.
     public boolean save(Booking booking) {
         String SQL = "INSERT INTO BOOKING (ID, RESERVATION_DATE, CUSTOMER_ID, FLIGHT_ID, SEAT_ID) VALUES (?, ?, ?, ?, ?)";
 
