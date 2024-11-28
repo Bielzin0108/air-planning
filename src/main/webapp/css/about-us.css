@@ -218,7 +218,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../img/about-us.png') no-repeat center center;
+    flex-direction: column;
+    background: url('../img/sustainability-desktop-hero-image.webp') no-repeat center center;
     height: 550px;
     background-size: cover;
     padding: 0 20px;
@@ -231,4 +232,65 @@ header {
     max-width: 700px;
     text-align: left;
     margin-right: 228px;
+}
+
+footer {
+    text-align: start;
+    margin-top: 20px;
+    color: #777;
+    font-size: 14px;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #3b59ff;
+    padding: 44px;
+    margin-top: 78px;
+}
+
+.footer-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+    margin-left: 76px;
+}
+
+.footer-menu ul li {
+    margin: 10px 0;
+}
+
+.footer-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 10px;
+    width: 100%;
+    padding-top: 44px;
+    padding-left: 72px;
+    padding-right: 72px;
+    color: white;
+    font-family: Quicksand-Bold;
+}
+
+.footer-text {
+    padding-left: 56px;
+    padding-right: 56px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 64px;
+    margin-left: 64px;
+}
+
+.price-text {
+    margin-bottom: 44px;
+    margin-top: 44px;
 }

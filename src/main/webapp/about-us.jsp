@@ -195,13 +195,47 @@
             </div>
         </div>
         <div class="sustainability-image-footer">
-            <h1>Nossos passos em <br/> direção à <br/> sustentabilidade</h1>
-            <p>Queremos ajudar todos os viajantes a explorar nosso mundo com facilidade, nessa e nas próximas
-                gerações.</p>
-            <p>Junto com nossos parceiros, estamos comprometidos em construir um futuro mais responsável para as
-                viagens.</p>
+            <div class="sustainability-wrapper">
+                <h1>Nossos passos em direção à <br/> sustentabilidade</h1>
+                <p>Queremos ajudar todos os viajantes a explorar nosso mundo com facilidade, nessa e nas próximas
+                    gerações.</p>
+                <p>Junto com nossos parceiros, estamos comprometidos em construir um futuro mais responsável para as
+                    viagens.</p>
+            </div>
         </div>
     </div>
+    <footer>
+        <div class="footer-text">
+            <p class="price-text">Preços de passagens aéreas por viajante e nossas estimativas mais baixas se baseiam
+                nas
+                tarifas mais recentes. Os preços de hotéis são calculados com base no preço mais barato por noite de um
+                hotel
+                de 4 estrelas para as datas selecionadas.</p> <br/>
+            <p>Estas são as estimativas de preço mais baixas para passagens aéreas da classe Econômica para um viajante.
+                Os
+                preços são baseados nas tarifas mais recentes. Aviso de isenção de responsabilidade: alguns desses
+                filtros são
+                uma tecnologia experimental derivada do ChatGPT. Algumas respostas podem não ser verificadas ou
+                confiáveis.
+                Esta ferramenta se destina apenas para inspiração de viagem. Os viajantes devem consultar as orientações
+                do
+                governo ao planejar uma viagem.</p>
+        </div>
+        <div class="footer-menu">
+            <ul>
+                <li><a href="#">Quem somos</a></li>
+                <li><a href="#">Entrar</a></li>
+                <li><a href="/home.jsp">Home</a></li>
+            </ul>
+            <div class="footer-copyright">
+                <p>Todos os direitos reservados. Este site ou qualquer parte dele não pode ser reproduzido ou usado de
+                    forma
+                    alguma sem autorização expressa, por escrito, do autor ou editor, exceto pelo uso de citações breves
+                    em uma
+                    resenha de ebook.</p>
+            </div>
+        </div>
+    </footer>
 </head>
 <body>
 
