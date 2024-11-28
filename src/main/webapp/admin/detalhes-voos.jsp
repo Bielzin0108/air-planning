@@ -6,72 +6,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes do Voo</title>
-    <link rel="stylesheet" href="/admin/css/detalhes-voos.css">
+    <link rel="stylesheet" href="../TelaAdm/style.css">
 </head>
 <body>
-<header>
-    <div class="container">
-        <div class="admin-info">
-            <span>Admin</span>
+    <header>
+        <div class="header-content">
+            <span class="admin-text">Admin</span>
+            <a href="<%= request.getContextPath() %>/logout" class="logout">Logout</a> <!-- Ação de logout -->
         </div>
-        <div class="nav-links">
-            <a href="#">Logout</a>
+    </header>
+    <main>
+        <h1>Detalhes do voo</h1>
+        <div class="details">
+            <div class="detail-item">
+                <strong>Voo</strong>
+                <div class="detail-info">
+                    <span><%= request.getAttribute("flight") != null ? request.getAttribute("flight") : "VVI - GRU - Rio de Janeiro" %></span> <!-- Exibe dados dinâmicos -->
+                    <img src="https://img.icons8.com/material-outlined/24/000000/edit.png" alt="Editar" class="edit-icon">
+                </div>
+            </div>
+            <div class="detail-item">
+                <strong>Número do voo</strong>
+                <div class="detail-info">
+                    <span><%= request.getAttribute("flightNumber") != null ? request.getAttribute("flightNumber") : "007445" %></span> <!-- Exibe dados dinâmicos -->
+                    <img src="https://img.icons8.com/material-outlined/24/000000/edit.png" alt="Editar" class="edit-icon">
+                </div>
+            </div>
+            <div class="detail-item">
+                <strong>Horário de partida</strong>
+                <div class="detail-info">
+                    <span><%= request.getAttribute("departureTime") != null ? request.getAttribute("departureTime") : "18h35" %></span> <!-- Exibe dados dinâmicos -->
+                    <img src="https://img.icons8.com/material-outlined/24/000000/edit.png" alt="Editar" class="edit-icon">
+                </div>
+            </div>
+            <div class="detail-item">
+                <strong>Horário de chegada</strong>
+                <div class="detail-info">
+                    <span><%= request.getAttribute("arrivalTime") != null ? request.getAttribute("arrivalTime") : "22h35" %></span> <!-- Exibe dados dinâmicos -->
+                    <img src="https://img.icons8.com/material-outlined/24/000000/edit.png" alt="Editar" class="edit-icon">
+                </div>
+            </div>
+            <div class="detail-item">
+                <strong>Preço</strong>
+                <div class="detail-info">
+                    <span><%= request.getAttribute("price") != null ? request.getAttribute("price") : "R$ 7.500" %></span> <!-- Exibe dados dinâmicos -->
+                    <img src="https://img.icons8.com/material-outlined/24/000000/edit.png" alt="Editar" class="edit-icon">
+                </div>
+            </div>
+            <div class="detail-item">
+                <strong>Assentos disponíveis</strong>
+                <div class="detail-info">
+                    <span><%= request.getAttribute("availableSeats") != null ? request.getAttribute("availableSeats") : "14" %></span> <!-- Exibe dados dinâmicos -->
+                    <img src="https://img.icons8.com/material-outlined/24/000000/edit.png" alt="Editar" class="edit-icon">
+                </div>
+            </div>
         </div>
-    </div>
-</header>
-<main class="container">
-    <h1>Detalhes do voo</h1>
-    <div class="details-box">
-        <div class="detail-item">
-            <span class="label">Voo</span>
-            <span class="value">
-            <c:out value="${destination}" default="VVI - GRU - Rio de Janeiro" />
-        </span>
+    </main>
+    <footer>
+        <div>
+            <a href="#">Quem somos</a>
+            <a href="#">Entrar</a>
+            <a href="#">Home</a>
         </div>
-        <div class="detail-item">
-            <span class="label">Número do voo</span>
-            <span class="value">
-            <c:out value="${flight.flightNumber}" default="007445" />
-        </span>
-        </div>
-        <div class="detail-item">
-            <span class="label">Horário de partida</span>
-            <span class="value">
-            <c:out value="${flight.departureDateTime}" default="18h35" />
-        </span>
-        </div>
-        <div class="detail-item">
-            <span class="label">Horário de chegada</span>
-            <span class="value">
-            <c:out value="${flight.arrivalDateTime}" default="22h35" />
-        </span>
-        </div>
-        <div class="detail-item">
-            <span class="label">Preço</span>
-            <span class="value">R$
-            <c:out value="${flight.price}" default="7.500" />
-        </span>
-        </div>
-        <div class="detail-item">
-            <span class="label">Assentos disponíveis</span>
-            <span class="value">
-            <c:out value="${countSeats}" default="14" />
-        </span>
-        </div>
-    </div>
-</main>
-<footer>
-    <div class="footer-menu">
-        <ul>
-            <li><a href="#">Quem somos</a></li>
-            <li><a href="#">Entrar</a></li>
-            <li><a href="#">Entrar</a></li>
-            <li><a href="#">Home</a></li>
-        </ul>
-    </div>
-    <div class="footer-copyright">
-        <p>Todos os direitos reservados. Este site ou qualquer parte dele não pode ser reproduzido ou usado de forma alguma sem autorização expressa, por escrito, do autor ou editor, exceto pelo uso de citações breves em uma resenha de ebook.</p>
-    </div>
-</footer>
+        <p>Todos os direitos reservados. Este site ou qualquer parte dele não pode ser reproduzido ou usado de forma alguma sem autorização expressa, por escrito, do autor ou editor.</p>
+    </footer>
 </body>
 </html>
