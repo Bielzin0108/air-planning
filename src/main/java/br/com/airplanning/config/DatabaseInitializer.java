@@ -21,8 +21,10 @@ public class DatabaseInitializer implements ServletContextListener {
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         try (Connection connection = ConnectionPoolConfig.getConnection()) {
             String script = readScriptFromFile("/script.sql");
+            String insertDataScript = readScriptFromFile("/InsertData.sql");
             try (Statement stmt = connection.createStatement()) {
                 stmt.execute(script);
+                stmt.execute(insertDataScript);
             }
         } catch (SQLException | IOException e) {
             e.printStackTrace();

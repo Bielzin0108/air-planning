@@ -1,6 +1,8 @@
 package br.com.airplanning.servlet;
 
+import br.com.airplanning.model.Destination;
 import br.com.airplanning.model.Flight;
+import br.com.airplanning.repository.destination.DestinationRepository;
 import br.com.airplanning.repository.flight.FlightRepository;
 
 import javax.servlet.ServletException;
@@ -10,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 
@@ -18,6 +21,12 @@ public class FlightServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        DestinationRepository destinationRepository = new DestinationRepository();
+
+        List<Destination> destinations = destinationRepository.getAllDestinations();
+
+        req.setAttribute("destinations", destinations);
+
         req.getRequestDispatcher("/admin/cadastrar-voos.jsp").forward(req, resp);
     }
 
@@ -43,8 +52,7 @@ public class FlightServlet extends HttpServlet {
             FlightRepository flightRepository = new FlightRepository();
             flightRepository.createFlight(flight);
 
-            resp.sendRedirect("/admin/flights.jsp");
-
+            resp.sendRedirect("/admin/gerenciar-voos.jsp");
         } catch (Exception e) {
             e.printStackTrace();
 
