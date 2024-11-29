@@ -43,6 +43,7 @@ public class LoginServlet extends HttpServlet {
 
                 // Se a senha for correta, ele é redirecionado para a home.
                 req.getSession().setAttribute("user", customer);
+                req.getSession().setAttribute("customerId", customer.getId());
                 req.getSession().setAttribute("successMessage", "Login realizado com sucesso!");
                 resp.sendRedirect("/home");
             } else {

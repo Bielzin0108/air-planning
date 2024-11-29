@@ -64,4 +64,34 @@ public class CustomerRepository {
         return customer;
 
     }
+
+    public Customer findCustomerById(UUID customerId) {
+        String SQL = "SELECT * FROM CUSTOMER WHERE ID = ?";
+        Customer customer = null;
+
+        try {
+            Connection con = ConnectionPoolConfig.getConnection();
+            PreparedStatement preparedStatement = con.prepareStatement(SQL);
+            preparedStatement.setObject(1, customerId);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            if (rs.next()) {
+                String name = rs.getString("NAME");
+                String phone = rs.getString("PHONE");
+                String email = rs.getString("EMAIL");
+                String password = rs.getString("PASSWORD");
+                String document = rs.getString("DOCUMENT");
+                TypeCustomer type = TypeCustomer.valueOf(rs.getString("TYPE"));
+                customer = new Customer(customerId, name, phone, email, password, document, type);
+            }
+
+            con.close();
+
+        } catch (Exception e) {
+            System.out.println("A busca do cliente pelo ID não deu certo!");
+        }
+
+        return customer;
+    }
+
 }

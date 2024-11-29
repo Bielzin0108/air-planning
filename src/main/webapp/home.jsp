@@ -112,7 +112,7 @@
 
     <div class="offers-container">
         <div class="offers-header">
-            <p class="offers-title">Ofertas de voos partindo de Brasil</p>
+            <p class="offers-title">Ofertas de voos que cabem no seu bolso</p>
             <p class="offers-subtitle">Estas são as ofertas dos voos mais baratos. Corra! Todos os voos partem nos
                 próximos três meses.</p>
         </div>
