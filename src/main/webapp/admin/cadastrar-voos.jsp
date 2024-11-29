@@ -18,7 +18,6 @@
             <li><a href="/home.jsp">Home</a></li>
             <li><a href="/about-us.jsp">Sobre</a></li>
             <li><a href="#">Contato</a></li>
-            <li><a href="#">Ajuda</a></li>
         </ul>
     </nav>
     <div class="admin-menu">

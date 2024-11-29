@@ -18,8 +18,7 @@
             <ul>
                 <li><a href="/home">Home</a></li>
                 <li><a href="/about-us.jsp">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Ajuda</a></li>
+                <li><a href="/contato.jsp">Contato</a></li>
             </ul>
         </div>
         <div class="user-menu">
