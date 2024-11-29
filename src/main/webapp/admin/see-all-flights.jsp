@@ -20,14 +20,22 @@
     </div>
     <div class="menu">
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="/home.jsp">Home</a></li>
             <li><a href="/about-us.jsp">Sobre</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="/contato.jsp">Contato</a></li>
+            <li><a href="/admin/dashboard">Dashboard</a></li>
         </ul>
     </div>
     <div class="user-menu">
-        <a href="#" class="login">Log in</a>
-        <span class="menu-icon">Menu</span>
+        <div class="user-icon">
+        <img src="/img/user.png" alt="User Icon">
+        </div>
+        <span class="logout" onclick="window.location.href='/logout'">
+            Logout
+        </span>
+        <span class="menu-icon" onclick="window.location.href='/booking'">
+        Meus Bookings
+    </span>
     </div>
 </header>
 <div class="flights-container">
@@ -48,7 +56,7 @@
             <tr>
                 <td>${flight.origin}</td>
                 <td>
-                    <button class="details-button"><a href="/detalhes-voos?flightId=${flight.id}">Ver mais
+                    <button class="details-button"><a href="/admin/detalhes-voos?flightId=${flight.id}">Ver mais
                         detalhes</a></button>
                 </td>
                 <td>

@@ -16,11 +16,19 @@
             <li><a href="/home.jsp">Home</a></li>
             <li><a href="/about-us.jsp">Sobre</a></li>
             <li><a href="/contato.jsp">Contato</a></li>
+            <li><a href="/admin/dashboard">Dashboard</a></li>
         </ul>
     </div>
     <div class="user-menu">
-        <a href="#" class="login">Log in</a>
-        <span class="menu-icon">Menu</span>
+        <div class="user-icon">
+            <img src="/img/user.png" alt="User Icon">
+        </div>
+        <span class="logout" onclick="window.location.href='/logout'">
+            Logout
+        </span>
+        <span class="menu-icon" onclick="window.location.href='/booking'">
+        Meus Bookings
+    </span>
     </div>
 </header>
 
@@ -28,8 +36,8 @@
     <section class="buttons-container">
         <h1>Gerenciar Voos</h1>
         <div class="buttons">
-            <button class="manage-btn" onclick="window.location.href='/cadastrar-voos'">Cadastrar Voo</button>
-            <button class="manage-btn" onclick="window.location.href='/visualizar-voos'">Listar Voos</button>
+            <button class="manage-btn" onclick="window.location.href='/admin/cadastrar-voos'">Cadastrar Voo</button>
+            <button class="manage-btn" onclick="window.location.href='/admin/visualizar-voos'">Listar Voos</button>
         </div>
     </section>
 </main>

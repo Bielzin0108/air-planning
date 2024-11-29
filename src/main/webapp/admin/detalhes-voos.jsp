@@ -17,12 +17,20 @@
         <ul>
             <li><a href="/home.jsp">Home</a></li>
             <li><a href="/about-us.jsp">Sobre</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="/contato.jsp">Contato</a></li>
+            <li><a href="/admin/dashboard">Dashboard</a></li>
         </ul>
     </div>
-    <div class="admin-menu">
-        <a href="#" class="login">Log in</a>
-        <span class="menu-icon">Menu</span>
+    <div class="user-menu">
+        <div class="user-icon">
+            <img src="/img/user.png" alt="User Icon">
+        </div>
+        <span class="logout" onclick="window.location.href='/logout'">
+            Logout
+        </span>
+        <span class="menu-icon" onclick="window.location.href='/booking'">
+        Meus Bookings
+    </span>
     </div>
 </header>
     <main>

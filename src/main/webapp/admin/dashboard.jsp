@@ -21,8 +21,19 @@
             <li><a href="/home.jsp">Home</a></li>
             <li><a href="/about-us.jsp">Sobre</a></li>
             <li><a href="/contato.jsp">Contato</a></li>
-            <li><a href="/logout">Sair</a></li>
+            <li><a href="/admin/dashboard">Dashboard</a></li>
         </ul>
+    </div>
+    <div class="user-menu">
+        <div class="user-icon">
+            <img src="/img/user.png" alt="User Icon">
+        </div>
+        <span class="logout" onclick="window.location.href='/logout'">
+            Logout
+        </span>
+        <span class="menu-icon" onclick="window.location.href='/booking'">
+        Meus Bookings
+    </span>
     </div>
 </header>
 
@@ -30,24 +41,32 @@
     <h1>Bem-vindo, Administrador</h1>
     <p>Escolha uma opção para gerenciar o sistema:</p>
     <div class="options">
-        <button class="option-btn">
-            <a href="/admin/gerenciar-voos">Gerenciar Voos</a>
-            <p>Adicione, edite ou exclua voos disponíveis no sistema.</p>
+        <button class="manage-btn" onclick="window.location.href='/admin/gerenciar-voos'">
+            Gerenciar Voos
+            <p>Cadastre ou liste os voos existentes no sistema.</p>
         </button>
-        <button class="option-btn">
-            <a href="/admin/visualizar-reservas">Visualizar Reservas</a>
-            <p>Confira e gerencie todas as reservas feitas pelos clientes.</p>
+        <button class="manage-btn" onclick="window.location.href='/admin/visualizar-voos'">
+            Visualizar Todos os Voos
+            <p>Veja a lista completa de voos cadastrados no sistema.</p>
         </button>
-        <button class="option-btn">
-            <a href="/admin/gerenciar-clientes">Gerenciar Clientes</a>
-            <p>Visualize e gerencie os dados dos clientes registrados.</p>
-        </button>
-        <!-- Adicione mais botões conforme necessário -->
     </div>
 </main>
 
 <footer>
-    <p>&copy; 2024 Air Planning. Todos os direitos reservados.</p>
+    <div class="footer-menu">
+        <ul>
+            <li><a href="/about-us.jsp">Quem somos</a></li>
+            <li><a href="#">Entrar</a></li>
+            <li><a href="/home.jsp">Home</a></li>
+        </ul>
+        <div class="footer-copyright">
+            <p>Todos os direitos reservados. Este site ou qualquer parte dele não pode ser reproduzido ou usado de
+                forma
+                alguma sem autorização expressa, por escrito, do autor ou editor, exceto pelo uso de citações breves
+                em uma
+                resenha de ebook.</p>
+        </div>
+    </div>
 </footer>
 </body>
 </html>

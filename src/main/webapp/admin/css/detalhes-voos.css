@@ -7,6 +7,7 @@
     font-family: Quicksand-Regular;
     src: url(/fonts/Quicksand-Regular.ttf);
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -15,12 +16,14 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
     background-color: #f0f0f0;
     overscroll-behavior: none;
 }
 
-/* Cabeçalho */
 header {
     display: flex;
     justify-content: space-between;
@@ -43,7 +46,7 @@ header {
     list-style: none;
     gap: 20px;
     padding: 0;
-    margin-left: 100px;
+    margin-left: 200px;
 }
 
 .menu ul li a {
@@ -63,32 +66,45 @@ header {
     color: #000000;
 }
 
-.admin-menu {
+.user-menu {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.admin-menu .login {
+.user-menu span {
+    display: inline-block;
     text-decoration: none;
     color: white;
     font-weight: bold;
-    background: #4045e0;
     padding: 8px 16px;
-    border-radius: 16px;
-    transition: background 0.3s, transform 0.2s;
+    background: #5157FF;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.admin-menu .login:hover {
-    background: #3038b8;
+.user-menu span:hover {
+    transform: translateY(-5px);
+    background: #4045E0;
+    color: #000000;
+}
+
+.user-menu .user-icon img {
+    width: 19px;
+    height: 19px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.user-menu .user-icon img:hover {
     transform: scale(1.1);
 }
 
-.admin-menu .menu-icon {
+.user-menu .menu-icon {
     font-weight: bold;
     cursor: pointer;
 }
-
 
 main {
     max-width: 900px;
@@ -140,7 +156,7 @@ footer {
 .footer-menu {
     display: flex;
     flex-direction: column;
-    background-color: #3b59ff;
+    background-color: #5157FF;
     padding: 44px;
     margin-top: 78px;
 }
