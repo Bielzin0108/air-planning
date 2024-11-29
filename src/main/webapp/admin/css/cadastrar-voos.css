@@ -103,14 +103,21 @@ header {
     cursor: pointer;
 }
 main {
-    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 160px);
+    padding: 20px;
+    text-align: center;
 }
 h1 {
+    text-align: center;
     margin-bottom: 40px;
     color: black;
 }
 .flight-form {
     max-width: 800px;
+    margin: 0 auto;
 }
 .form-group {
     display: flex;
