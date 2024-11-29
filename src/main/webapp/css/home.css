@@ -43,7 +43,7 @@ header {
     list-style: none;
     gap: 20px;
     padding: 0;
-    margin-left: 100px;
+    margin-left: 200px;
 }
 
 .menu ul li a {
@@ -69,18 +69,32 @@ header {
     gap: 20px;
 }
 
-.user-menu .login {
+.user-menu span {
+    display: inline-block;
     text-decoration: none;
     color: white;
     font-weight: bold;
-    background: #4045e0;
     padding: 8px 16px;
-    border-radius: 16px;
-    transition: background 0.3s, transform 0.2s;
+    background: #5157FF;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.user-menu .login:hover {
-    background: #3038b8;
+.user-menu span:hover {
+    transform: translateY(-5px);
+    background: #4045E0;
+    color: #000000;
+}
+
+.user-menu .user-icon img {
+    width: 19px;
+    height: 19px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.user-menu .user-icon img:hover {
     transform: scale(1.1);
 }
 
@@ -595,7 +609,7 @@ footer {
 .footer-menu {
     display: flex;
     flex-direction: column;
-    background-color: #3b59ff;
+    background-color: #5157FF;
     padding: 44px;
     margin-top: 78px;
 }

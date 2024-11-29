@@ -20,8 +20,15 @@
         </ul>
     </div>
     <div class="user-menu">
-        <a href="#" class="login">Log in</a>
-        <span class="menu-icon">Menu</span>
+        <div class="user-icon">
+            <img src="/img/user.png" alt="User Icon">
+        </div>
+        <span class="logout" onclick="window.location.href='/logout'">
+            Logout
+        </span>
+        <span class="menu-icon" onclick="window.location.href='/booking'">
+        Meus Bookings
+    </span>
     </div>
 </header>
 <main>
