@@ -42,10 +42,12 @@
                     <li><strong>Brooklyn Bridge:</strong> Caminhe e explore o Dumbo.</li>
                 </ul>
             </div>
-            <div class="images">
-                <img src="<%= request.getContextPath() %>/images/estatuadaliberdade.png" alt="Estátua da Liberdade">
-                <img src="<%= request.getContextPath() %>/images/broadway.png" alt="Times Square">
+            <div class="image1">
+                <img src="<%= request.getContextPath() %>/img/estatuadaliberdade.png" alt="Estátua da Liberdade">
+
             </div>
+            <div class="image2"
+            <img src="<%= request.getContextPath() %>/img/broadway.png" alt="Times Square">
         </div>
     </section>
 
