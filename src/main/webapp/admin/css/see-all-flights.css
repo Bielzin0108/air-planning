@@ -8,10 +8,6 @@
     src: url(/fonts/Quicksand-Regular.ttf);
 }
 
-main {
-    padding: 22px 86px;
-}
-
 * {
     margin: 0;
     padding: 0;
