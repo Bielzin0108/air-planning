@@ -88,14 +88,12 @@ header {
     cursor: pointer;
 }
 
-/* Main Content */
 .content {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
 
-/* Intro Section */
 .intro {
     margin-bottom: 2rem;
 }
@@ -119,91 +117,92 @@ header {
 }
 
 .attraction-list {
-    display: flex; /* Habilita layout flexível */
-    gap: 2rem; /* Espaço entre texto e imagem */
-    align-items: flex-start; /* Alinha itens ao topo */
-    margin-bottom: 2rem; /* Espaço entre os blocos de conteúdo */
+    display: flex;
+    gap: 2rem;
+/ align-items: flex-start;
+    margin-bottom: 2rem;
 }
 
 .image-left {
-    flex: 1; /* A imagem ocupa uma parte proporcional */
+    flex: 1;
     display: flex;
-    justify-content: flex-start; /* Alinha a imagem à esquerda */
-    align-items: flex-start; /* Alinha ao topo */
+    justify-content: flex-start;
+    align-items: flex-start;
     padding: 1rem;
 }
 
 .image-left img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse os limites */
-    border-radius: 8px; /* Bordas arredondadas */
-    height: auto; /* Mantém a proporção */
+    max-width: 100%;
+    border-radius: 8px;
+    height: auto;
 }
 
 .text-right {
-    flex: 2; /* O texto ocupa mais espaço */
-    font-size: 1rem; /* Tamanho do texto */
+    flex: 2;
+    font-size: 1rem;
 }
 
 .text-right ul {
-    list-style: none; /* Remove bullets padrão */
-    padding: 0; /* Remove o padding padrão */
+    list-style: none;
+    padding: 0;
 }
 
 .text-right ul li {
-    margin-bottom: 1rem; /* Espaçamento entre itens */
-    text-align: justify; /* Justifica o texto */
-    position: relative; /* Habilita o uso do ::before */
+    margin-bottom: 1rem;
+    text-align: justify;
+    position: relative;
     padding-left: 1.5rem;
 }
 
 .text-right ul li::before {
-    content: "•"; /* Adiciona bullets personalizados */
+    content: "•";
     position: absolute;
     left: 0;
-    color: #5157FF; /* Cor do bullet */
-    font-size: 1.2rem; /* Tamanho do bullet */
+    color: #5157FF;
+    font-size: 1.2rem;
     font-weight: bold;
 }
+
 .safety {
-  margin: 2rem auto;
-  max-width: 900px;
-  font-family: Arial, sans-serif;
+    margin: 2rem auto;
+    max-width: 900px;
+    font-family: Arial, sans-serif;
 }
 
 .safety h3 {
-  font-size: 1.8rem;
-  color: #5157FF;
-  margin-bottom: 1rem;
-  text-align: left;
+    font-size: 1.8rem;
+    color: #5157FF;
+    margin-bottom: 1rem;
+    text-align: left;
 }
 
 .safety-list ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 .safety-list ul li {
-  margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .safety-list ul li strong {
-  font-size: 1.2rem;
-  color: #000;
+    font-size: 1.2rem;
+    color: #000;
 }
 
 .safety-list ul li p {
-  font-size: 1rem;
-  color: #555;
-  margin-left: 1rem;
-  line-height: 1.6;
+    font-size: 1rem;
+    color: #555;
+    margin-left: 1rem;
+    line-height: 1.6;
 }
 
 .conclusion {
-  margin-top: 2rem;
-  font-size: 1rem;
-  color: #333;
-  text-align: justify;
-  line-height: 1.6;
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #333;
+    text-align: justify;
+    line-height: 1.6;
 }
 
 footer {
