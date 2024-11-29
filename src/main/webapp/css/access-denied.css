@@ -1,0 +1,61 @@
+@font-face {
+    font-family: Quicksand-Bold;
+    src: url(/fonts/Quicksand-Bold.ttf);
+}
+
+@font-face {
+    font-family: Quicksand-Regular;
+    src: url(/fonts/Quicksand-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Quicksand-Regular;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.access-denied-container {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+}
+
+.access-denied-container h1 {
+    font-size: 2rem;
+    color: #FF4D4D;
+    margin-bottom: 20px;
+}
+
+.access-denied-container p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.access-denied-container .back-button {
+    text-decoration: none;
+    background-color: #5157FF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.access-denied-container .back-button:hover {
+    background-color: #4045E0;
+    transform: scale(1.05);
+}
