@@ -16,7 +16,7 @@
 
 <header>
     <div class="logo">
-        <img src="../img/logo.png" alt="Logo">
+        <img src="/img/logo.png" alt="Logo">
     </div>
     <div class="menu">
         <ul>
@@ -64,22 +64,6 @@
 
 </div>
 <footer>
-    <div class="footer-text">
-        <p class="price-text">Preços de passagens aéreas por viajante e nossas estimativas mais baixas se baseiam
-            nas
-            tarifas mais recentes. Os preços de hotéis são calculados com base no preço mais barato por noite de um
-            hotel
-            de 4 estrelas para as datas selecionadas.</p> <br/>
-        <p>Estas são as estimativas de preço mais baixas para passagens aéreas da classe Econômica para um viajante.
-            Os
-            preços são baseados nas tarifas mais recentes. Aviso de isenção de responsabilidade: alguns desses
-            filtros são
-            uma tecnologia experimental derivada do ChatGPT. Algumas respostas podem não ser verificadas ou
-            confiáveis.
-            Esta ferramenta se destina apenas para inspiração de viagem. Os viajantes devem consultar as orientações
-            do
-            governo ao planejar uma viagem.</p>
-    </div>
     <div class="footer-menu">
         <ul>
             <li><a href="#">Quem somos</a></li>

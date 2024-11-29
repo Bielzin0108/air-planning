@@ -17,6 +17,7 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
+    overscroll-behavior: none;
 }
 
 /* Cabeçalho */
@@ -41,8 +42,8 @@ header {
     display: flex;
     list-style: none;
     gap: 20px;
-    margin: 0;
     padding: 0;
+    margin-left: 100px;
 }
 
 .menu ul li a {

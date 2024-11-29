@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -6,17 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar um Voo</title>
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/admin/css/cadastrar-voos.css">
+    <link rel="stylesheet" href="/admin/css/cadastrar-voos.css">
 </head>
 <body>
 <header>
     <div class="logo">
-        <img src="<%= request.getContextPath() %>/img/logo.png" alt="Logo">
+        <img src="/img/logo.png" alt="Logo">
     </div>
     <nav class="menu">
         <ul>
-            <li><a href="<%= request.getContextPath() %>/home.jsp">Home</a></li>
-            <li><a href="<%= request.getContextPath() %>/about-us.jsp">Sobre</a></li>
+            <li><a href="/home.jsp">Home</a></li>
+            <li><a href="/about-us.jsp">Sobre</a></li>
             <li><a href="#">Contato</a></li>
             <li><a href="#">Ajuda</a></li>
         </ul>
@@ -29,7 +29,7 @@
 
 <main>
     <h1>Cadastrar um voo</h1>
-    <form class="flight-form" action="<%= request.getContextPath() %>/cadastrar-voos" method="post">
+    <form class="flight-form" action="/cadastrar-voos" method="post">
         <div class="form-group">
             <label for="voo">Número do voo</label>
             <input name="flightNumber" id="voo" class="input-container" type="text"/>
@@ -55,7 +55,7 @@
             <select id="destinationSelect" name="destinationId" class="form-control">
                 <c:forEach var="destination" items="${destinations}">
                     <option value="${destination.id}">
-                        ${destination.city}, ${destination.country}
+                            ${destination.city}, ${destination.country}
                     </option>
                 </c:forEach>
             </select>
@@ -73,7 +73,8 @@
         </ul>
         <div class="footer-copyright">
             <p>Todos os direitos reservados. Este site ou qualquer parte dele não pode ser reproduzido ou usado de
-                forma alguma sem autorização expressa, por escrito, do autor ou editor, exceto pelo uso de citações breves
+                forma alguma sem autorização expressa, por escrito, do autor ou editor, exceto pelo uso de citações
+                breves
                 em uma resenha de ebook.</p>
         </div>
     </div>
