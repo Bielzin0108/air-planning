@@ -109,6 +109,7 @@ main {
     min-height: calc(100vh - 160px);
     padding: 20px;
     text-align: center;
+    flex-direction: column;
 }
 h1 {
     text-align: center;
