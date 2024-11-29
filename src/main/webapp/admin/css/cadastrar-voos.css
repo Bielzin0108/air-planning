@@ -15,10 +15,14 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
     background-color: #f0f0f0;
     overscroll-behavior: none;
 }
+
 header {
     display: flex;
     justify-content: space-between;
