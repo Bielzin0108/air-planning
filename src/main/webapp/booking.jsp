@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,13 +40,11 @@
             <c:forEach var="booking" items="${bookings}">
                 <div class="booking-card">
                     <div class="booking-info">
-                        <h2>${booking.flight.origin} → ${booking.flight.destination}</h2>
-                        <p><strong>Número do Voo:</strong> ${booking.flight.flightNumber}</p>
-                        <p><strong>Data:</strong> ${booking.flight.departureDateTime}</p>
-                        <p><strong>Preço:</strong> R$ ${booking.flight.price}</p>
+                        <h2>Data Reserva: ${booking.reservationDate}</h2>
+
                     </div>
                     <div class="actions">
-                        <a href="/booking-details?id=${booking.id}" class="details-button">Ver Detalhes</a>
+                        <a href="/booking-details?bookingId=${booking.id}" class="details-button">Ver Detalhes</a>
                     </div>
                 </div>
             </c:forEach>

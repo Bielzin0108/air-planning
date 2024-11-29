@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <head>
+
     <%@ page contentType="text/html; charset=UTF-8" %>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,12 +40,12 @@
     <section class="summary-section">
         <div class="summary-box">
             <h2>Resumo do Voo</h2>
-            <p><span>Número do Voo:</span> ${booking.flight.flightNumber}</p>
-            <p><span>Origem:</span> ${booking.flight.origin}</p>
-            <p><span>Destino:</span> ${booking.flight.destination.city}, ${booking.flight.destination.country}</p>
-            <p><span>Data de Partida:</span> ${booking.flight.departureDateTime}</p>
-            <p><span>Data de Chegada:</span> ${booking.flight.arrivalDateTime}</p>
-            <p><span>Preço:</span> R$ ${booking.flight.price}</p>
+            <p><span>Número do Voo:</span> ${booking.flightNumber}</p>
+            <p><span>Origem:</span> ${booking.origin}</p>
+            <p><span>Destino:</span> ${booking.city}, ${booking.country}</p>
+            <p><span>Data de Partida:</span> ${booking.departureDateTime}</p>
+            <p><span>Data de Chegada:</span> ${booking.arrivalDateTime}</p>
+            <p><span>Preço:</span> R$ ${booking.price}</p>
         </div>
 
         <div class="summary-box">
@@ -58,9 +60,9 @@
     <section class="payment-section">
         <div class="payment-box">
             <h2>Pagamento</h2>
-            <p><span>Preço do Voo:</span> R$ ${booking.flight.price}</p>
+            <p><span>Preço do Voo:</span> R$ ${booking.price}</p>
             <p><span>Taxas:</span> R$ 20,00</p>
-            <p><strong>Total:</strong> R$ ${booking.flight.price + 20}</p>
+            <p><strong>Total:</strong> R$ ${booking.price + 20}</p>
         </div>
     </section>
 

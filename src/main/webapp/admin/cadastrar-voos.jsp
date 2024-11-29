@@ -36,30 +36,30 @@
 
 <main>
     <h1>Cadastrar um voo</h1>
-    <form class="flight-form" action="/cadastrar-voos" method="post">
+    <form class="flight-form" action="/admin/cadastrar-voos" method="post">
         <div class="form-group">
-            <label for="voo">Número do voo</label>
-            <input name="flightNumber" id="voo" class="input-container" type="text"/>
+            <label for="voo">Número do Voo</label>
+            <input name="flightNumber" id="voo" class="input-container" type="text" placeholder="Digite o número do voo" required />
         </div>
         <div class="form-group">
-            <label for="partida">Horário de partida</label>
-            <input id="partida" name="departureDateTime" class="input-container" type="datetime-local"/>
+            <label for="partida">Horário de Partida</label>
+            <input id="partida" name="departureDateTime" class="input-container" type="datetime-local" required />
         </div>
         <div class="form-group">
-            <label for="chegada">Horário de chegada</label>
-            <input id="chegada" name="arrivalDateTime" class="input-container" type="datetime-local"/>
+            <label for="chegada">Horário de Chegada</label>
+            <input id="chegada" name="arrivalDateTime" class="input-container" type="datetime-local" required />
         </div>
         <div class="form-group">
             <label for="origem">Origem</label>
-            <input id="origem" name="origin" class="input-container" type="text"/>
+            <input id="origem" name="origin" class="input-container" type="text" placeholder="Digite a origem" required />
         </div>
         <div class="form-group">
             <label for="preco">Preço</label>
-            <input id="preco" name="price" class="input-container" type="number"/>
+            <input id="preco" name="price" class="input-container" type="number" placeholder="Digite o preço" required />
         </div>
         <div class="form-group">
-            <label for="destinationSelect">Selecione os destinos:</label>
-            <select id="destinationSelect" name="destinationId" class="form-control">
+            <label for="destinationSelect">Destino</label>
+            <select id="destinationSelect" name="destinationId" class="input-container" required>
                 <c:forEach var="destination" items="${destinations}">
                     <option value="${destination.id}">
                             ${destination.city}, ${destination.country}
@@ -81,8 +81,7 @@
         <div class="footer-copyright">
             <p>Todos os direitos reservados. Este site ou qualquer parte dele não pode ser reproduzido ou usado de
                 forma alguma sem autorização expressa, por escrito, do autor ou editor, exceto pelo uso de citações
-                breves
-                em uma resenha de ebook.</p>
+                breves em uma resenha de ebook.</p>
         </div>
     </div>
 </footer>

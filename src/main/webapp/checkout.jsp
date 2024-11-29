@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <link rel="stylesheet" href="css/checkout.css">
 <head>
@@ -54,7 +55,7 @@
 
         <div class="passenger-form">
             <h2>Detalhes do Passageiro</h2>
-            <form>
+            <form action="/checkout?flightId=${flight.id}" method="post">
                 <label>Nome Completo:</label>
                 <input type="text" value="${customer.name}" readonly>
 
@@ -67,21 +68,33 @@
                 <label>CPF:</label>
                 <input type="email" value="${customer.document}" readonly>
 
+                <div class="form-group">
+                    <label for="seatSelected">Assento</label>
+                    <select id="seatSelected" name="seatId" class="input-container" required>
+                        <c:forEach var="seat" items="${seats}">
+                            <option value="${seat.id}">
+                                    ${seat.seatNumber}, ${seat.available}
+                            </option>
+                        </c:forEach>
+                    </select>
+                </div>
 
+
+                <div class="payment-details">
+                    <h2>Pagamento</h2>
+                    <p>Preço: R$ ${flight.price}</p>
+                    <p>Taxas: R$ 20,00</p>
+                    <p><strong>Total:</strong> R$ ${flight.price + 20}</p>
+                    <button type="submit" class="confirm-button">Confirmar e Pagar</button>
+                </div>
             </form>
             <div class="info-message">
                 <span class="info-icon">ℹ️</span>
-                <p>Os dados do passageiro foram preenchidos no momento da criação da conta na Air-Planning e não podem ser alterados. Caso queira atualizá-los, entre em contato com um dos nossos administradores.</p>
+                <p>Os dados do passageiro foram preenchidos no momento da criação da conta na Air-Planning e não podem
+                    ser alterados. Caso queira atualizá-los, entre em contato com um dos nossos administradores.</p>
             </div>
         </div>
-
-        <div class="payment-details">
-            <h2>Pagamento</h2>
-            <p>Preço: R$ ${flight.price}</p>
-            <p>Taxas: R$ 20,00</p>
-            <p><strong>Total:</strong> R$ ${flight.price + 20}</p>
-            <button type="submit" class="confirm-button">Confirmar e Pagar</button>
-        </div>
+        
     </div>
 </div>
 <footer>

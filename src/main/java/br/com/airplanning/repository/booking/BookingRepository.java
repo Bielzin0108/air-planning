@@ -5,6 +5,8 @@ import br.com.airplanning.model.Booking;
 import br.com.airplanning.repository.customer.dto.BookingDTO;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class BookingRepository {
@@ -136,6 +138,34 @@ public class BookingRepository {
             throw new RuntimeException(e);
         }
 
+    }
+
+    public List<Booking> getAllByUserId(final UUID customerId) {
+        String SQL = "SELECT * FROM BOOKING WHERE CUSTOMER_ID = ?";
+        List<Booking> bookings = new ArrayList<>();
+
+        try (Connection connection = ConnectionPoolConfig.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(SQL)) {
+
+            preparedStatement.setObject(1, customerId);
+
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    Booking booking = new Booking(
+                            resultSet.getObject("ID", UUID.class),
+                            resultSet.getTimestamp("RESERVATION_DATE").toLocalDateTime(),
+                            resultSet.getObject("CUSTOMER_ID", UUID.class),
+                            resultSet.getObject("FLIGHT_ID", UUID.class),
+                            resultSet.getObject("SEAT_ID", UUID.class)
+                    );
+                    bookings.add(booking);
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Error fetching bookings for customer ID: " + customerId, e);
+        }
+
+        return bookings;
     }
 
 }

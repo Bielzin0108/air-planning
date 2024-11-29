@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html lang="pt-BR">
 <head>
     <%@ page contentType="text/html; charset=UTF-8" %>
@@ -123,193 +124,39 @@
                 próximos três meses.</p>
         </div>
         <div class="card-container">
-            <div class="card">
-                <img src="img/sao-raimundo.png" alt="São Raimundo Nonato">
-                <div class="card-content">
-                    <h2>São Raimundo Nonato</h2>
-                    <p>Brasil</p>
-                    <div class="flight-info">
-                        <div class="flight-details">
-                            <img src="img/map-icon.png" alt="Icon">
-                            <div>
-                                <p class="flight-date">ter., 17 de dez.</p>
-                                <p>REC - NSR com Azul</p>
+            <c:forEach var="flight" items="${flights}">
+                <div class="card">
+                    <img src="${flight.imageUrl}" alt="">
+                    <div class="card-content">
+                        <h2>${flight.origin}</h2>
+                        <p>Rio de Janeiro</p>
+                        <div class="flight-info">
+                            <div class="flight-details">
+                                <img src="img/map-icon.png" alt="Icon">
+                                <div>
+                                    <p class="flight-date">${flight.departureDateTime}</p>
+                                    <p>FLN - MVD com Azul</p>
+                                </div>
                             </div>
+                            <p class="flight-type">Direto</p>
                         </div>
-                        <p class="flight-type">Direto</p>
-                    </div>
-                    <div class="flight-info">
-                        <div class="flight-details">
-                            <img src="img/map-icon.png" alt="Icon">
-                            <div>
-                                <p class="flight-date">ter., 24 de dez.</p>
-                                <p>NSR - REC com Azul</p>
+                        <div class="flight-info">
+                            <div class="flight-details">
+                                <img src="img/map-icon.png" alt="Icon">
+                                <div>
+                                    <p class="flight-date">${flight.arrivalDateTime}</p>
+                                    <p>FLN - MVD com Azul</p>
+                                </div>
                             </div>
+                            <p class="flight-type">Direto</p>
                         </div>
-                        <p class="flight-type">Direto</p>
+                        <span class="price">de R$ ${flight.price}
+                    <img src="img/right-arrow.png" alt="Right Arrow">
+                </span>
+                        <a href="/checkout?flightId=${flight.id}">Reserve já</a>
                     </div>
-                    <span class="price">de R$ 240
-                <img src="img/right-arrow.png" alt="Right Arrow">
-            </span>
                 </div>
-            </div>
-
-            <div class="card">
-                <img src="img/assuncao.png" alt="Assunção">
-                <div class="card-content">
-                    <h2>Assunção</h2>
-                    <p>Paraguai</p>
-                    <div class="flight-info">
-                        <div class="flight-details">
-                            <img src="img/map-icon.png" alt="Icon">
-                            <div>
-                                <p class="flight-date">qua., 18 de dez.</p>
-                                <p>FLN - ASU com Azul</p>
-                            </div>
-                        </div>
-                        <p class="flight-type">Direto</p>
-                    </div>
-                    <div class="flight-info">
-                        <div class="flight-details">
-                            <img src="img/map-icon.png" alt="Icon">
-                            <div>
-                                <p class="flight-date">qua., 18 de dez.</p>
-                                <p>ASU - FLN com Azul</p>
-                            </div>
-                        </div>
-                        <p class="flight-type">Direto</p>
-                    </div>
-                    <span class="price">de R$ 606
-                <img src="img/right-arrow.png" alt="Right Arrow">
-            </span>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="img/montevideu.png" alt="Montevidéu">
-                <div class="card-content">
-                    <h2>Montevidéu</h2>
-                    <p>Uruguai</p>
-                    <div class="flight-info">
-                        <div class="flight-details">
-                            <img src="img/map-icon.png" alt="Icon">
-                            <div>
-                                <p class="flight-date">seg., 16 de dez.</p>
-                                <p>FLN - MVD com Azul</p>
-                            </div>
-                        </div>
-                        <p class="flight-type">Direto</p>
-                    </div>
-                    <div class="flight-info">
-                        <div class="flight-details">
-                            <img src="img/map-icon.png" alt="Icon">
-                            <div>
-                                <p class="flight-date">seg., 16 de dez.</p>
-                                <p>MVD - FLN com Azul</p>
-                            </div>
-                        </div>
-                        <p class="flight-type">Direto</p>
-                    </div>
-                    <span class="price">de R$ 692
-                <img src="img/right-arrow.png" alt="Right Arrow">
-            </span>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-container">
-            <div class="card">
-                <img src="img/santiago.png" alt="Santiago">
-                <div class="card-content">
-                    <h2>Santiago</h2>
-                    <p>Chile</p>
-                    <div class="flight-info">
-                        <div class="flight-details">
-                            <img src="img/jetsmart.png" alt="Icon">
-                            <div>
-                                <p class="flight-date">qua., 4 de dez.</p>
-                                <p>GRU - SCL com JetSmart</p>
-                            </div>
-                        </div>
-                        <p class="flight-type">Direto</p>
-                    </div>
-                    <div class="flight-info">
-                        <div class="flight-details">
-                            <img src="img/jetsmart.png" alt="Icon">
-                            <div>
-                                <p class="flight-date">seg., 16 de dez.</p>
-                                <p>SCL - GRU com JetSmart</p>
-                            </div>
-                        </div>
-                        <p class="flight-type">Direto</p>
-                    </div>
-                    <span class="price">de R$ 726
-                <img src="img/right-arrow.png" alt="Right Arrow">
-            </span>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="img/santa-cruz.png" alt="Santa Cruz de la Sierra">
-                <div class="card-content">
-                    <h2>Santa Cruz de la Sierra</h2>
-                    <p>Bolívia</p>
-                    <div class="flight-info">
-                        <div class="flight-details">
-                            <img src="img/gol-airline.png" alt="Icon">
-                            <div>
-                                <p class="flight-date">qui., 30 de jan.</p>
-                                <p>GRU - VVI com GOL Linhas Aéreas</p>
-                            </div>
-                        </div>
-                        <p class="flight-type">Direto</p>
-                    </div>
-                    <div class="flight-info">
-                        <div class="flight-details">
-                            <img src="img/gol-airline.png" alt="Icon">
-                            <div>
-                                <p class="flight-date">qui., 6 de fev.</p>
-                                <p>VVI - GRU com GOL Linhas Aéreas</p>
-                            </div>
-                        </div>
-                        <p class="flight-type">Direto</p>
-                    </div>
-                    <span class="price">de R$ 974
-                <img src="img/right-arrow.png" alt="Right Arrow">
-            </span>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="img/buenos-aires.png" alt="Buenos Aires">
-                <div class="card-content">
-                    <h2>Buenos Aires</h2>
-                    <p>Argentina</p>
-                    <div class="flight-info">
-                        <div class="flight-details">
-                            <img src="img/map-icon.png" alt="Icon">
-                            <div>
-                                <p class="flight-date">seg., 16 de dez.</p>
-                                <p>FLN - EZE com JetSmart</p>
-                            </div>
-                        </div>
-                        <p class="flight-type">Direto</p>
-                    </div>
-                    <div class="flight-info">
-                        <div class="flight-details">
-                            <img src="img/map-icon.png" alt="Icon">
-                            <div>
-                                <p class="flight-date">qui., 19 de dez.</p>
-                                <p>EZE - FLN com JetSmart</p>
-                            </div>
-                        </div>
-                        <p class="flight-type">Direto</p>
-                    </div>
-                    <span class="price">de R$ 1.313
-                <img src="img/right-arrow.png" alt="Right Arrow">
-            </span>
-                </div>
-            </div>
+            </c:forEach>
         </div>
 
         <div class="info-container">

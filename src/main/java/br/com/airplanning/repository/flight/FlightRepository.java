@@ -63,8 +63,9 @@ public class FlightRepository {
                 double price = rs.getDouble("PRICE");
                 UUID destinationId = rs.getObject("DESTINATION_ID", UUID.class);
                 UUID id = rs.getObject("ID", UUID.class);
+                String imageUrl = rs.getString("IMAGE_URL");
 
-                flight = new Flight(id, flightNumber, departureDateTime.toLocalDateTime(), arrivalDateTime.toLocalDateTime(), origin, price, destinationId);
+                flight = new Flight(id, flightNumber, departureDateTime.toLocalDateTime(), arrivalDateTime.toLocalDateTime(), origin, price, destinationId, imageUrl);
             }
             return flight;
         } catch (Exception e) {
@@ -234,8 +235,9 @@ public class FlightRepository {
                 double price = rs.getDouble("PRICE");
                 UUID id = rs.getObject("ID", UUID.class);
                 UUID destinationId = rs.getObject("DESTINATION_ID", UUID.class);
+                String imageUrl = rs.getString("IMAGE_URL");
 
-                Flight flight = new Flight(id, flightNumber, departureDateTime.toLocalDateTime(), arrivalDateTime.toLocalDateTime(), origin, price, destinationId);
+                Flight flight = new Flight(id, flightNumber, departureDateTime.toLocalDateTime(), arrivalDateTime.toLocalDateTime(), origin, price, destinationId, imageUrl);
                 flights.add(flight);
             }
 
@@ -303,5 +305,33 @@ public class FlightRepository {
 
         return seatsList;
     }
+
+    public List<Seats> getSeats(final UUID flightId) {
+        String SQL = "SELECT * FROM SEATS WHERE FLIGHT_ID = ?";
+        List<Seats> seatsList = new ArrayList<>();
+
+        try (Connection connection = ConnectionPoolConfig.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(SQL)) {
+
+            preparedStatement.setObject(1, flightId);
+
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    Seats seat = new Seats(
+                            resultSet.getObject("ID", UUID.class),
+                            resultSet.getInt("SEAT_NUMBER"),
+                            resultSet.getBoolean("AVAILABLE"),
+                            resultSet.getObject("FLIGHT_ID", UUID.class)
+                    );
+                    seatsList.add(seat);
+                }
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+        return seatsList;
+    }
+
 
 }

@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class Flight {
+
     private UUID id;
     private String flightNumber;
     private LocalDateTime departureDateTime;
@@ -12,10 +13,12 @@ public class Flight {
     private double price;
     private UUID destinationId;
 
+    private String imageUrl;
+
     public Flight() {
     }
 
-    public Flight(UUID id, String flightNumber, LocalDateTime departureDateTime, LocalDateTime arrivalDateTime, String origin, double price, UUID destinationId) {
+    public Flight(UUID id, String flightNumber, LocalDateTime departureDateTime, LocalDateTime arrivalDateTime, String origin, double price, UUID destinationId, String imageUrl) {
         this.id = id;
         this.flightNumber = flightNumber;
         this.departureDateTime = departureDateTime;
@@ -23,11 +26,21 @@ public class Flight {
         this.origin = origin;
         this.price = price;
         this.destinationId = destinationId;
+        this.imageUrl = imageUrl;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public UUID getId() {
         return id;
     }
+
 
     public void setId(UUID id) {
         this.id = id;
@@ -81,4 +94,6 @@ public class Flight {
         this.destinationId = destinationId;
     }
 }
+
+
 
