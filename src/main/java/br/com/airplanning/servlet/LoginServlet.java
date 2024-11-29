@@ -26,9 +26,7 @@ public class LoginServlet extends HttpServlet {
         String senha = req.getParameter("senha");
 
         CustomerRepository customerRepository = new CustomerRepository();
-
         Customer customer = customerRepository.findCustomerByEmail(email);
-
 
         if (customer != null) {
             String senhaCriptografada = null;
@@ -38,21 +36,25 @@ public class LoginServlet extends HttpServlet {
                 throw new RuntimeException(e);
             }
 
-            // Se o cliente for encontrado, ele criptografa a senha fornecida pelo usuário para comparar com a senha do BD.
+            // Comparar a senha criptografada com a senha do banco de dados
             if (customer.getPassword().equals(senhaCriptografada)) {
-
-                // Se a senha for correta, ele é redirecionado para a home.
+                // Salvar os dados do usuário na sessão
                 req.getSession().setAttribute("user", customer);
                 req.getSession().setAttribute("customerId", customer.getId());
+                req.getSession().setAttribute("userType", customer.getType().toString());
                 req.getSession().setAttribute("successMessage", "Login realizado com sucesso!");
-                resp.sendRedirect("/home");
+
+                // Redirecionar com base no tipo do usuário
+                if ("ADMIN".equals(customer.getType().toString())) {
+                    resp.sendRedirect("/admin/dashboard"); // Página inicial do admin
+                } else {
+                    resp.sendRedirect("/home"); // Página inicial do cliente
+                }
             } else {
-                // Se a senha for incorreta, ele permanece no login!
                 req.getSession().setAttribute("errorMessage", "Email ou senha incorretos!");
                 resp.sendRedirect("/login");
             }
         } else {
-            // Usuário não encontrado
             req.getSession().setAttribute("errorMessage", "Email ou senha incorretos!");
             resp.sendRedirect("/login");
         }

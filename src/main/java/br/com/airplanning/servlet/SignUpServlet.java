@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 
-@WebServlet("/signup")
+@WebServlet("/admin/signup")
 public class SignUpServlet extends HttpServlet {
 
     @Override

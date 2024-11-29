@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.UUID;
 
-@WebServlet("/detalhes-voos")
+@WebServlet("/admin/detalhes-voos")
 public class FlightDetailsServlet extends HttpServlet {
 
     @Override

@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.List;
 
 
-@WebServlet("/visualizar-voos")
+@WebServlet("/admin/visualizar-voos")
 public class SeeAllFlightsServlet extends HttpServlet {
 
     @Override

@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.UUID;
 
 
-@WebServlet("/cadastrar-voos")
+@WebServlet("/admin/cadastrar-voos")
 public class FlightServlet extends HttpServlet {
 
     @Override
