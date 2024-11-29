@@ -6,15 +6,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes do Voo</title>
-    <link rel="stylesheet" href="../TelaAdm/style.css">
+    <link rel="stylesheet" href="../admin/css/detalhes-voos.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <span class="admin-text">Admin</span>
-            <a href="<%= request.getContextPath() %>/logout" class="logout">Logout</a> <!-- Ação de logout -->
-        </div>
-    </header>
+<header>
+    <div class="logo">
+        <img src="../img/logo.png" alt="Logo">
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="/home.jsp">Home</a></li>
+            <li><a href="/about-us.jsp">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Ajuda</a></li>
+        </ul>
+    </div>
+    <div class="admin-menu">
+        <a href="#" class="login">Log in</a>
+        <span class="menu-icon">Menu</span>
+    </div>
+</header>
     <main>
         <h1>Detalhes do voo</h1>
         <div class="details">
@@ -62,13 +73,19 @@
             </div>
         </div>
     </main>
-    <footer>
-        <div>
-            <a href="#">Quem somos</a>
-            <a href="#">Entrar</a>
-            <a href="#">Home</a>
+<div class="footer-menu">
+        <ul>
+            <li><a href="/about-us.jsp">Quem somos</a></li>
+            <li><a href="#">Entrar</a></li>
+            <li><a href="/home.jsp">Home</a></li>
+        </ul>
+        <div class="footer-copyright">
+            <p>Todos os direitos reservados. Este site ou qualquer parte dele não pode ser reproduzido ou usado de
+                forma
+                alguma sem autorização expressa, por escrito, do autor ou editor, exceto pelo uso de citações breves
+                em uma
+                resenha de ebook.</p>
         </div>
-        <p>Todos os direitos reservados. Este site ou qualquer parte dele não pode ser reproduzido ou usado de forma alguma sem autorização expressa, por escrito, do autor ou editor.</p>
-    </footer>
+    </div>
 </body>
 </html>
