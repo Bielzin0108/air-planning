@@ -551,6 +551,89 @@ button[type="submit"]:hover {
     margin: 0;
 }
 
+
+.blog-promo {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-promo h2 {
+    font-size: 1.8rem;
+    color: #5157FF;
+    margin-bottom: 10px;
+    font-family: Quicksand-Bold;
+}
+
+.blog-promo p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.blog-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.blog-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.blog-card img {
+    width: 100%;
+    height: auto;
+}
+
+.blog-content {
+    padding: 20px;
+}
+
+.blog-content h3 {
+    font-size: 1.2rem;
+    color: #5157FF;
+    margin-bottom: 10px;
+}
+
+.blog-content p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.blog-content button {
+    background-color: #5157FF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.blog-content button:hover {
+    background-color: #4045E0;
+    transform: scale(1.05);
+}
+
+
 .faq-section {
     max-width: 800px;
     font-family: Arial, sans-serif;

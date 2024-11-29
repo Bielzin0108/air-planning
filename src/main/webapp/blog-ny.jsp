@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrador
-  Date: 25/11/2024
-  Time: 21:05
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -15,51 +8,99 @@
     <link rel="stylesheet" href="css/blog-ny.css">
 </head>
 <body>
-<header class="header">
-    <div class="container">
-        <h1>Guia para Turistas em Nova York</h1>
-        <nav class="nav">
-            <a href="<%= request.getContextPath() %>/admin" class="nav-link">Admin</a>
-            <a href="<%= request.getContextPath() %>/logout" class="nav-link">Logout</a>
-        </nav>
+<header>
+    <div class="logo">
+        <img src="/img/logo.png" alt="Logo">
+    </div>
+    <nav class="menu">
+        <ul>
+            <li><a href="/home.jsp">Home</a></li>
+            <li><a href="/about-us.jsp">Sobre</a></li>
+            <li><a href="/contato.jsp">Contato</a></li>
+        </ul>
+    </nav>
+    <div class="user-menu">
+        <div class="user-icon">
+            <img src="/img/user.png" alt="User Icon">
+        </div>
+        <span class="logout" onclick="window.location.href='/logout'">Logout</span>
+        <span class="menu-icon" onclick="window.location.href='/booking'">Meus Bookings</span>
     </div>
 </header>
+
 <main class="content">
-    <section class="intro">
-        <h2>Guia para Turistas em Nova York: O Que Fazer e Cuidados Importantes</h2>
-        <p>Nova York é uma das cidades mais emocionantes do mundo, com opções infinitas para explorar. Este guia oferece dicas das melhores atividades, lugares para se hospedar e cuidados a tomar durante sua visita à "Big Apple".</p>
-    </section>
+    <article class="blog-post">
+        <h1>Nova York: A Cidade Que Nunca Dorme</h1>
+        <p class="intro">
+            Nova York é um dos destinos mais icônicos do mundo, conhecido por sua cultura vibrante, monumentos
+            históricos e uma energia que nunca para. Este guia reúne as principais atrações que tornam a "Big Apple"
+            uma experiência inesquecível para qualquer viajante.
+        </p>
 
-    <section class="attractions">
-        <h3>Melhores Atrações e Atividades em Nova York</h3>
-        <div class="attraction-list">
-            <div class="text">
-                <ul>
-                    <li><strong>Times Square:</strong> O coração vibrante da cidade.</li>
-                    <li><strong>Central Park:</strong> Ideal para caminhadas e relaxamento.</li>
-                    <li><strong>Museus:</strong> MET, MoMA e Museu de História Natural.</li>
-                    <li><strong>Estátua da Liberdade:</strong> Visite a coroa e a Ellis Island.</li>
-                    <li><strong>Brooklyn Bridge:</strong> Caminhe e explore o Dumbo.</li>
-                </ul>
-            </div>
-            <div class="image1">
-                <img src="<%= request.getContextPath() %>/img/estatuadaliberdade.png" alt="Estátua da Liberdade">
+        <section>
+            <h2>Times Square</h2>
+            <img src="/img/blog-ny.png" alt="Times Square">
+            <p>
+                O coração pulsante de Nova York, famoso por seus letreiros iluminados e teatros da Broadway. Caminhar
+                por Times Square à noite é mergulhar em uma explosão de luzes e sons. Não perca a oportunidade de tirar
+                fotos incríveis neste lugar que representa a essência da cidade.
+            </p>
+        </section>
 
-            </div>
-            <div class="image2"
-            <img src="<%= request.getContextPath() %>/img/broadway.png" alt="Times Square">
-        </div>
-    </section>
+        <section>
+            <h2>Central Park</h2>
+            <img src="/img/central-park.png" alt="Central Park">
+            <p>
+                Um oásis de tranquilidade em meio à agitação de Manhattan, o Central Park oferece paisagens incríveis,
+                trilhas para caminhadas e opções para passeios de barco. É o local perfeito para um piquenique ou para
+                apreciar o contraste entre a natureza e os arranha-céus ao redor.
+            </p>
+        </section>
 
-    <section class="safety">
-        <h3>Cuidados e Dicas de Segurança</h3>
-        <ul>
-            <li>Compre ingressos em sites oficiais para evitar golpes.</li>
-            <li>Use táxis oficiais ou aplicativos como Uber e Lyft.</li>
-            <li>Evite carregar objetos de valor em locais movimentados.</li>
-            <li>Planeje seu itinerário para economizar tempo e dinheiro.</li>
-        </ul>
-    </section>
+        <section>
+            <h2>Empire State Building</h2>
+            <img src="/img/empire-state.png" alt="Empire State Building">
+            <p>
+                Suba até o observatório do Empire State Building e aprecie vistas panorâmicas de Nova York. Este
+                arranha-céu, um dos mais famosos do mundo, é um ícone da arquitetura moderna e um ponto turístico
+                imperdível.
+            </p>
+        </section>
+
+        <section>
+            <h2>Estátua da Liberdade</h2>
+            <img src="/img/estatuadaliberdade.png" alt="Estátua da Liberdade">
+            <p>
+                A Estátua da Liberdade é mais do que um monumento; é um símbolo de liberdade e democracia. Localizada
+                na Liberty Island, uma visita à estátua inclui a possibilidade de subir até sua coroa e explorar a Ellis
+                Island, onde você poderá aprender mais sobre a história da imigração nos Estados Unidos.
+            </p>
+        </section>
+
+        <section>
+            <h2>Brooklyn Bridge</h2>
+            <img src="/img/brooklyn-bridge.png" alt="Brooklyn Bridge">
+            <p>
+                A Brooklyn Bridge conecta Manhattan ao Brooklyn e é um dos melhores lugares para apreciar o skyline
+                da cidade. Caminhe pela ponte ao entardecer para vistas espetaculares e fotos inesquecíveis.
+            </p>
+        </section>
+    </article>
 </main>
+
+<footer>
+    <div class="footer-menu">
+        <ul>
+            <li><a href="/about-us.jsp">Quem somos</a></li>
+            <li><a href="#">Entrar</a></li>
+            <li><a href="/home.jsp">Home</a></li>
+        </ul>
+        <div class="footer-copyright">
+            <p>Todos os direitos reservados. Este site ou qualquer parte dele não pode ser reproduzido ou usado de
+                forma alguma sem autorização expressa, por escrito, do autor ou editor, exceto pelo uso de citações breves
+                em uma resenha de ebook.</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

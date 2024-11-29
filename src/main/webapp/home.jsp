@@ -394,6 +394,29 @@
             </div>
         </div>
 
+        <div class="blog-promo">
+            <h2>Explore nossos Blogs de Viagem</h2>
+            <p>Descubra dicas incríveis para aproveitar ao máximo sua viagem para Los Angeles e Nova York.</p>
+            <div class="blog-cards">
+                <div class="blog-card">
+                    <img src="/img/blog-la.png" alt="Los Angeles">
+                    <div class="blog-content">
+                        <h3>Guia de Los Angeles</h3>
+                        <p>Dicas essenciais para explorar a cidade dos anjos.</p>
+                        <button onclick="window.location.href='/blog-la'">Leia Mais</button>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="/img/blog-ny.png" alt="Nova York">
+                    <div class="blog-content">
+                        <h3>Guia de Nova York</h3>
+                        <p>Descubra os segredos da cidade que nunca dorme.</p>
+                        <button onclick="window.location.href='/blog-ny'">Leia Mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="faq-section">
             <h2>Perguntas frequentes sobre como encontrar ofertas de voos</h2>
             <details class="faq-item">
