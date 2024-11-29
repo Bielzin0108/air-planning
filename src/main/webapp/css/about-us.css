@@ -200,7 +200,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 400px;
+    margin-left: 200px;
 }
 
 .sustainability-content h2 {
@@ -230,8 +230,6 @@ header {
 
 .sustainability-image-footer {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     background: url('../img/sustainability-desktop-hero-image.webp') no-repeat center center;
     height: 550px;
@@ -240,12 +238,17 @@ header {
     color: white;
 }
 
+.sustainability-wrapper {
+    margin-left: 156px;
+    margin-top: 44px;
+}
+
 .sustainability-image-footer h1 {
     font-size: 62px;
     font-family: Quicksand-Bold;
     max-width: 700px;
     text-align: left;
-    margin-right: 228px;
+
 }
 
 footer {
