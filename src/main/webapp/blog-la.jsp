@@ -38,8 +38,17 @@
       <div class="text-left">
         <ul>
           <li><strong>Hollywood e a Calçada da Fama:</strong> Caminhe pela famosa Calçada da Fama e veja as estrelas dedicadas às maiores personalidades do entretenimento. Não deixe de visitar o Teatro Chinês e o Dolby Theatre, casa do Oscar.</li>
+        </ul>
+
+          <ul>
           <li><strong>Observatório Griffith:</strong> O Observatório Griffith oferece vistas incríveis da cidade e acesso a exposições científicas. Aproveite também para fazer uma trilha até o icônico Letreiro de Hollywood.</li>
+          </ul>
+
+          <ul>
           <li><strong>Santa Monica e Venice Beach:</strong> Passeie pelo Píer de Santa Monica, com sua famosa roda-gigante, ou explore Venice Beach, conhecida por sua atmosfera boêmia, artistas de rua e a agitada Muscle Beach.</li>
+          </ul>
+
+          <ul>
           <li><strong>Universal Studios:</strong> Um parque temático imperdível para fãs de cinema, com atrações baseadas em grandes franquias como "Harry Potter" e "Jurassic Park", além de tours pelos estúdios de filmagem.</li>
         </ul>
       </div>
@@ -48,11 +57,7 @@
         <img src="/img/calcadadafama.png" alt="Calçada da Fama">
       </div>
     </div>
-            </div>
-            <!-- Image Section -->
-            <div class="image-left">
-              <img src="/img/universal.png" alt="Universal">
-            </div>
+
         <!-- Text Section -->
         <div class="text-right">
           <ul>
@@ -61,6 +66,12 @@
             <li><strong>Malibu e Suas Praias:</strong> Aprecie as belas praias de Malibu, como Zuma Beach e El Matador State Beach, perfeitas para relaxar, surfar ou apreciar o pôr do sol.</li>
             <li><strong>Downtown Los Angeles (DTLA):</strong> Descubra a moderna cena gastronômica no Grand Central Market, visite o Walt Disney Concert Hall ou explore a histórica Olvera Street, considerada o coração cultural da cidade.</li>
           </ul>
+
+        </div>
+      <!-- Image Section -->
+      <div class="image-left">
+          <img src="/img/universal.png" alt="Universal">
+      </div>
 
       </div>
     </section>
