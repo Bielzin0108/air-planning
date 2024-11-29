@@ -7,18 +7,21 @@
     <link rel="stylesheet" href="css/contato.css">
 </head>
 <body>
+<div class="top-border"></div> <!-- Barra superior -->
 <div class="container">
     <div class="form-box">
-        <h1>ENTRE EM CONTATO CONOSCO</h1>
+        <h1>ENTRE EM
+            CONTATO CONOSCO</h1>
+
         <form action="processForm.jsp" method="post">
-            <label for="nome">SEU NOME</label>
-            <input type="text" id="nome" name="nome" required>
 
-            <label for="telefone">SEU TELEFONE</label>
-            <input type="text" id="telefone" name="telefone" required>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
 
-            <label for="comentario">COLOQUE SUA DÚVIDA OU COMENTÁRIO</label>
-            <textarea id="comentario" name="comentario" rows="5" required></textarea>
+
+            <input type="text" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
+
+
+            <textarea id="comentario" name="comentario" rows="5" placeholder="Escreva aqui..." required></textarea>
 
             <button type="submit">Enviar</button>
         </form>
@@ -26,24 +29,19 @@
 
     <div class="footer">
         <div class="contact-info">
-            <div class="icon">
-                <img src="email-icon.png" alt="Email">
-            </div>
+            <img src="img/mail.png" alt="Email">
             <p>emailairplanning@email.com</p>
         </div>
         <div class="contact-info">
-            <div class="icon">
-                <img src="phone-icon.png" alt="Telefone">
-            </div>
+            <img src="img/telephone.png" alt="Telefone">
             <p>0800 123 456</p>
         </div>
         <div class="contact-info">
-            <div class="icon">
-                <img src="address-icon.png" alt="Endereço">
-            </div>
+            <img src="img/endereco.png" alt="Endereço">
             <p>Rua Senac Santo Amaro<br>Turma 3ND</p>
         </div>
     </div>
 </div>
+<div class="bottom-border"></div> <!-- Barra inferior -->
 </body>
 </html>
